@@ -1,0 +1,55 @@
+#Define these, they show up in the pipeline as Stages that execute jobs that are defined below
+stages:
+  - Lint
+  - Build
+  - Deploy
+
+# Used to speed up compiling by keeping a local copy of previous work
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+# Lint stage
+Lint:
+  image: node:latest
+  stage: Lint
+  before_script:
+    - yarn install
+  script:
+    - yarn run lint
+
+# Build stage
+Build:
+  image: node:latest
+  stage: Build
+  before_script:
+    - yarn install
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - build/
+  only:
+    - master
+
+# Deploy stage
+Deploy:
+  image: python:latest
+  stage: Deploy
+  environment:
+    name: production
+    url: http://staging.yourtopa.$AWSURL
+  variables:
+    AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+  before_script:
+    - pip install awscli # Install the SDK
+  script:
+    - export BUCKET="staging.yourtopia";
+    - aws s3 rm s3://"$BUCKET"/ --recursive
+    - aws s3 cp ./build s3://"$BUCKET"/ --recursive
+  dependencies:
+    - Build
+  only:
+    - master
