@@ -4,12 +4,12 @@ $green: #9ded92;
 // Navbar
 $navbar-item-img-max-height: 3rem;
 $navbar-height: 4rem;
-$navbar-breakpoint: 768px;
+$navbar-breakpoint: 769px;
 
 // Footer
 $footer-background-color: white;
 $footer-padding: 0.5rem;
-$footer-height: 1rem;
+$footer-height: 1.5rem;
 
 // Input
 $input-hover-color: none;
@@ -23,11 +23,13 @@ $tabs-border-bottom-color: white;
 $tabs-link-hover-border-bottom-color: $green;
 $tabs-link-active-border-bottom-color: $green;
 $tabs-link-active-color: hsl(0, 0%, 29%);
-$tabs-link-padding: 0.7em 0em;
+$tabs-link-padding: 7px 0em;
 $tabs-border-bottom-width: 2px;
 
 // Main
-$app-height: calc(100vh - (#{$navbar-height} + #{$footer-height}));
+$app-height: calc(
+  100vh - (#{$navbar-height} + #{$footer-height} + #{$footer-padding})
+);
 
 @import '~bulma/bulma.sass';
 @import './materialdesignicons.min.css';
@@ -90,9 +92,10 @@ code {
 }
 
 .footer {
-  min-height: $footer-height;
+  height: $footer-height;
 }
 
 .main {
   min-height: $app-height;
+  margin-top: $navbar-height;
 }

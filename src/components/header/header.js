@@ -34,6 +34,7 @@ export default class Header extends Component {
             className="columns is-mobile is-marginless"
           >
             <a
+              href="/"
               role="button"
               className="navbar-burger"
               aria-label="menu"
@@ -43,14 +44,8 @@ export default class Header extends Component {
               <span aria-hidden="true" />
               <span aria-hidden="true" />
             </a>
-            <div className="column is-7-tablet is-10-mobile">
-              <Search />
-            </div>
-            <div class="column">
-              <div className="navbar-menu">
-                <Categories />
-              </div>
-            </div>
+            <Search />
+            <Categories />
           </div>
         </nav>
       </div>

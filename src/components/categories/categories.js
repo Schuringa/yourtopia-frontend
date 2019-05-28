@@ -4,7 +4,7 @@ export default class Categories extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      showCategories: false
+      displayCategories: false
     }
     this.showCategories = this.showCategories.bind(this)
     this.hideCategories = this.hideCategories.bind(this)
@@ -12,31 +12,47 @@ export default class Categories extends Component {
 
   showCategories () {
     this.setState({
-      showCategories: true
+      displayCategories: true
     })
   }
 
   hideCategories () {
     this.setState({
-      showCategories: false
+      displayCategories: false
     })
   }
 
   render () {
-    const { showCategories } = this.state
+    const { displayCategories } = this.state
     return (
-      <div onMouseLeave={this.hideCategories}>
-        <div className="tabs is-marginless">
-          <ul>
-            <li className={`is-size-7 ${showCategories ? 'is-active' : ''}`}>
-              <a onMouseEnter={this.showCategories} className="is-size-7">
-                Categories
-              </a>
-            </li>
-          </ul>
+      <div className="column is-paddingless">
+        <div
+          onMouseLeave={this.hideCategories}
+          className="navbar-menu category-tab"
+        >
+          <div className="tabs is-marginless">
+            <ul>
+              <li
+                className={`is-size-7 ${displayCategories ? 'is-active' : ''}`}
+              >
+                <a
+                  href="/"
+                  onMouseEnter={this.showCategories}
+                  className="is-size-7"
+                >
+                  Categories
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            style={{ height: `${displayCategories ? '300px' : '0'}` }}
+            onMouseEnter={this.showCategories}
+            className="categories"
+          >
+            testing
+          </div>
         </div>
-
-        {showCategories ? <div className="categories">testing</div> : null}
       </div>
     )
   }
