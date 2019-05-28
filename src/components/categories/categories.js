@@ -48,7 +48,7 @@ export default class Categories extends Component {
             </ul>
           </div>
           <div
-            style={{ height: `${displayCategories ? '300px' : '0'}` }}
+            style={{ height: `${displayCategories ? '200px' : '0'}` }}
             onMouseEnter={this.showCategories}
             className="categories"
           >
