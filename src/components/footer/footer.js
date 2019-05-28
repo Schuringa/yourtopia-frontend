@@ -5,7 +5,7 @@ export default class Footer extends Component {
     return (
       <footer className="footer">
         <div className="has-text-centered">
-          <p>
+          <p className="is-size-7">
             <strong>Bulma</strong> by
             <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is
             licensed

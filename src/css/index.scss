@@ -1,0 +1,86 @@
+// Navbar
+$navbar-item-img-max-height: 3rem;
+$navbar-height: 4rem;
+$navbar-breakpoint: 768px;
+
+// Footer
+$footer-background-color: white;
+$footer-padding: 0.5rem;
+$footer-height: 3rem;
+
+// Input
+$input-hover-color: none;
+$input-hover-border-color: none;
+$input-focus-color: none;
+$input-focus-border-color: none;
+$input-focus-box-shadow-size: none;
+
+// Main
+$app-height: calc(100vh - (#{$navbar-height} + #{$footer-height}));
+
+@import '~bulma/bulma.sass';
+
+@import './materialdesignicons.min.css';
+
+.input {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: inset 0 -2px 0 $grey;
+  transition: all 300ms;
+  border-radius: 0;
+
+  &.is-small {
+    border-radius: 0;
+  }
+
+  &.is-active,
+  &.is-focused,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2px 0 $input-focus-border-color;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      box-shadow: inset 0 -1px 0 $color;
+
+      &.is-active,
+      &.is-focused,
+      &:active,
+      &:focus {
+        box-shadow: inset 0 -2px 0 $color;
+      }
+    }
+  }
+
+  &.is-disabled,
+  &[disabled],
+  &[readonly] {
+    border-bottom: 1px dotted $grey-lighter;
+    cursor: not-allowed;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.footer {
+  min-height: $footer-height;
+}
+
+.main {
+  min-height: $app-height;
+}
