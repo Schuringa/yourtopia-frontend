@@ -39,7 +39,7 @@ Deploy:
   stage: Deploy
   environment:
     name: production
-    url: http://staging.yourtopia.$AWSURL
+    url: http://staging.yourtopia.s3-website-ap-southeast-2.amazonaws.com
   variables:
     AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
