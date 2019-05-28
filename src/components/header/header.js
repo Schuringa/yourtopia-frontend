@@ -7,7 +7,11 @@ export default class Header extends Component {
   render () {
     return (
       <div>
-        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <nav
+          className="navbar header is-fixed-top"
+          role="navigation"
+          aria-label="main navigation"
+        >
           <div className="navbar-brand">
             <div className="navbar-item">
               <img

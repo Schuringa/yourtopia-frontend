@@ -1,3 +1,6 @@
+// Colors
+$green: #9ded92;
+
 // Navbar
 $navbar-item-img-max-height: 3rem;
 $navbar-height: 4rem;
@@ -6,7 +9,7 @@ $navbar-breakpoint: 768px;
 // Footer
 $footer-background-color: white;
 $footer-padding: 0.5rem;
-$footer-height: 3rem;
+$footer-height: 1rem;
 
 // Input
 $input-hover-color: none;
@@ -15,12 +18,21 @@ $input-focus-color: none;
 $input-focus-border-color: none;
 $input-focus-box-shadow-size: none;
 
+// Tabs
+$tabs-border-bottom-color: white;
+$tabs-link-hover-border-bottom-color: $green;
+$tabs-link-active-border-bottom-color: $green;
+$tabs-link-active-color: hsl(0, 0%, 29%);
+$tabs-link-padding: 0.7em 0em;
+$tabs-border-bottom-width: 2px;
+
 // Main
 $app-height: calc(100vh - (#{$navbar-height} + #{$footer-height}));
 
 @import '~bulma/bulma.sass';
-
 @import './materialdesignicons.min.css';
+@import '../components/categories/categories.scss';
+@import '../components/header/header.scss';
 
 .input {
   border: none;
