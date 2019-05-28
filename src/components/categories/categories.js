@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import data from './data.json'
 
 export default class Categories extends Component {
   constructor (props) {
@@ -23,6 +24,7 @@ export default class Categories extends Component {
   }
 
   render () {
+    console.log(data)
     const { displayCategories } = this.state
     return (
       <div className="column is-paddingless">
@@ -50,7 +52,20 @@ export default class Categories extends Component {
             onMouseEnter={this.showCategories}
             className="categories"
           >
-            testing
+            <div className="columns">
+              {data.topnavi.navigation_node.children[2].children.map(value => {
+                return (
+                  <div className="column category-list">
+                    <p className="has-text-weight-bold is-size-7">
+                      {value.name}
+                    </p>
+                    {value.children.map(value2 => {
+                      return <p className="is-size-7">{value2.name}</p>
+                    })}
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>
