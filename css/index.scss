@@ -10,7 +10,7 @@ $navbar-breakpoint: 769px;
 // Footer
 $footer-background-color: white;
 $footer-padding: 0.5rem;
-$footer-height: 1.5rem;
+$footer-height: 2rem;
 
 // Input
 $input-hover-color: none;
@@ -34,6 +34,7 @@ $app-height: calc(
 
 @import '~bulma/bulma.sass';
 @import '../components/header/header.scss';
+@import '../components/footer/footer.scss';
 
 .input {
   border: none;
@@ -90,12 +91,18 @@ code {
     monospace;
 }
 
-.footer {
-  height: $footer-height;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-}
-
 .main {
   min-height: $app-height;
   margin-top: $navbar-height;
+}
+
+// Cursor
+$cursors: (
+  'default' 'pointer' 'grab' 'help' 'wait' 'crosshair' 'not-allowed' 'zoom-in'
+);
+
+@each $cursor in $cursors {
+  .has-cursor-#{$cursor} {
+    cursor: #{$cursor} !important;
+  }
 }

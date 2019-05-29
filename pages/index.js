@@ -30,11 +30,7 @@ class IndexPage extends React.Component {
   render () {
     return (
       <Default meta={meta}>
-        <div>
-          <h1>This is the Front Page.</h1>
-          <h3>Random dog of the day:</h3>
-          {/* <img src={this.state.dog.url} alt="" /> */}
-        </div>
+        <div />
       </Default>
     )
   }
