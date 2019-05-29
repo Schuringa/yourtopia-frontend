@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import logo from '../../img/logo.png'
-import Search from '../search/search'
-import Categories from '../categories/categories'
-import MobileMenu from '../mobile-menu/mobile-menu'
+import Search from './search/search'
+import Categories from './categories/categories'
+import MobileMenu from './mobile-menu/mobile-menu'
 
 export default class Header extends Component {
   render () {

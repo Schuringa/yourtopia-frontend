@@ -54,7 +54,9 @@ export default class MobileMenu extends Component {
       <span ref={this.setWrapperRef}>
         <span
           role="button"
-          className="navbar-burger menu-button"
+          className={`navbar-burger menu-button ${
+            displayMenu ? 'is-active' : ''
+          }`}
           aria-label="menu"
           aria-expanded="false"
           onClick={this.toggleMenu}
@@ -66,7 +68,9 @@ export default class MobileMenu extends Component {
         <div
           style={{ width: `${displayMenu ? '250px' : '0'}` }}
           className="mobile-menu is-hidden-tablet"
-        />
+        >
+          Testing
+        </div>
       </span>
     )
   }
