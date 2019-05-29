@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import logo from '../../img/logo.png'
 import Search from '../search/search'
 import Categories from '../categories/categories'
+import MobileMenu from '../mobile-menu/mobile-menu'
 
 export default class Header extends Component {
   render () {
@@ -33,17 +34,7 @@ export default class Header extends Component {
             style={{ flexGrow: 1 }}
             className="columns is-mobile is-marginless"
           >
-            <a
-              href="/"
-              role="button"
-              className="navbar-burger"
-              aria-label="menu"
-              aria-expanded="false"
-            >
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-              <span aria-hidden="true" />
-            </a>
+            <MobileMenu />
             <Search />
             <Categories />
           </div>

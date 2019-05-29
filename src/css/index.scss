@@ -4,6 +4,7 @@ $green: #9ded92;
 // Navbar
 $navbar-item-img-max-height: 3rem;
 $navbar-height: 4rem;
+$navbar-height-mobile: 8rem;
 $navbar-breakpoint: 769px;
 
 // Footer
@@ -35,6 +36,7 @@ $app-height: calc(
 @import './materialdesignicons.min.css';
 @import '../components/categories/categories.scss';
 @import '../components/header/header.scss';
+@import '../components/mobile-menu/mobile-menu.scss';
 
 .input {
   border: none;

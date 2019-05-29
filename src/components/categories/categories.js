@@ -24,7 +24,6 @@ export default class Categories extends Component {
   }
 
   render () {
-    console.log(data)
     const { displayCategories } = this.state
     return (
       <div className="column is-paddingless">
@@ -48,11 +47,11 @@ export default class Categories extends Component {
             </ul>
           </div>
           <div
-            style={{ height: `${displayCategories ? '200px' : '0'}` }}
+            style={{ height: `${displayCategories ? '250px' : '0'}` }}
             onMouseEnter={this.showCategories}
             className="categories"
           >
-            <div className="columns">
+            <div className="columns is-multiline">
               {data.topnavi.navigation_node.children[2].children.map(value => {
                 return (
                   <div className="column category-list">
