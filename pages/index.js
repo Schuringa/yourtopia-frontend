@@ -3,7 +3,7 @@ import React from 'react'
 import Default from '../layouts/default'
 import '../css/index.scss'
 import axios from 'axios'
-const meta = { title: 'Index title', description: 'Index description' }
+const meta = { title: 'Yourtopia Staging', description: 'Staging site' }
 
 class IndexPage extends React.Component {
   constructor (props) {
