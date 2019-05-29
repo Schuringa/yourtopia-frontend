@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Icon from '@mdi/react'
+import { mdiMagnify } from '@mdi/js'
 
 export default class Search extends Component {
   render () {
@@ -11,7 +13,7 @@ export default class Search extends Component {
             placeholder="Search"
           />
           <span className="icon is-right has-text-grey">
-            <i className="mdi mdi-24px mdi-magnify" />
+            <Icon path={mdiMagnify} size={1} />
           </span>
         </div>
       </div>

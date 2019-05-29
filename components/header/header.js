@@ -9,7 +9,7 @@ export default class Header extends Component {
     return (
       <div>
         <nav
-          className="navbar header is-fixed-top"
+          className="navbar header"
           role="navigation"
           aria-label="main navigation"
         >

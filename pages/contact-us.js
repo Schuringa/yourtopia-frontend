@@ -4,7 +4,7 @@ const meta = { title: 'Contact us', description: 'Staging site' }
 
 export default () => (
   <Default meta={meta}>
-    <div className="column">
+    <div className="columns">
       <div className="column has-text-centered">
         <h3 className="title is-size-6">Contact us</h3>
         <p className="is-size-7">

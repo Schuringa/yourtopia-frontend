@@ -18,7 +18,7 @@ export default class Footer extends Component {
           </span>
           <span className="footer-item is-size-7">
             <Link prefetch href="/terms-and-conditions">
-              <a>Terms & Conidtions</a>
+              <a>Terms & Conditions</a>
             </Link>
           </span>
         </div>

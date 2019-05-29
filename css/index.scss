@@ -4,13 +4,13 @@ $green: #9ded92;
 // Navbar
 $navbar-item-img-max-height: 3rem;
 $navbar-height: 4rem;
-$navbar-height-mobile: 8rem;
+$navbar-height-touch: 8rem;
 $navbar-breakpoint: 769px;
 
 // Footer
 $footer-background-color: white;
+$footer-height: 1rem;
 $footer-padding: 0.5rem;
-$footer-height: 2rem;
 
 // Input
 $input-hover-color: none;
@@ -28,14 +28,42 @@ $tabs-link-padding: 7px 0em;
 $tabs-border-bottom-width: 2px;
 
 // Main
+$app-padding: 2em;
 $app-height: calc(
-  100vh - (#{$navbar-height} + #{$footer-height} + #{$footer-padding})
+  100vh - (#{$navbar-height} + #{$app-padding} + #{$footer-height})
+);
+
+$app-height-touch: calc(
+  100vh - (#{$navbar-height-touch} + #{$app-padding} + #{$footer-height})
 );
 
 @import '~bulma/bulma.sass';
 @import '../components/header/header.scss';
 @import '../components/footer/footer.scss';
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main {
+  min-height: $app-height;
+  @media screen and (max-width: $tablet) {
+    min-height: $app-height-touch;
+  }
+  padding: 2em;
+}
+
+// Inputs
 .input {
   border: none;
   padding-left: 0;
@@ -52,7 +80,7 @@ $app-height: calc(
   &.is-focused,
   &:active,
   &:focus {
-    box-shadow: inset 0 -2px 0 $input-focus-border-color;
+    box-shadow: inset 0 -2px 0 $grey-light;
   }
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
@@ -74,28 +102,6 @@ $app-height: calc(
   &[readonly] {
     border-bottom: 1px dotted $grey-lighter;
     cursor: not-allowed;
-  }
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.main {
-  min-height: $app-height;
-  margin-top: $navbar-height;
-  @media screen and (max-width: $tablet) {
-    margin-top: $navbar-height-mobile;
   }
 }
 
