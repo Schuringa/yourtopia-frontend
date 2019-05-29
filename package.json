@@ -1,41 +1,40 @@
 {
-  "name": "yourtopia-frontend",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ssr-react-next",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "deploy": "next build && sls deploy",
+    "lint": "yarn eslint"
+  },
   "dependencies": {
     "@mdi/font": "^3.6.95",
+    "@mdi/js": "^3.6.95",
+    "@mdi/react": "^1.1.1",
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.18.0",
+    "bulma": "^0.7.5",
+    "express": "^4.17.1",
+    "next": "^8.1.0",
+    "node-sass": "^4.12.0",
+    "path-match": "^1.2.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "lint": "yarn eslint src",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-domain-manager": "^3.2.2",
+    "serverless-http": "^2.0.2",
+    "url": "^0.11.0"
   },
   "devDependencies": {
-    "bulma": "^0.7.5",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
-    "eslint-plugin-standard": "^4.0.0",
-    "node-sass": "^4.12.0"
+    "eslint-plugin-standard": "^4.0.0"
   }
 }

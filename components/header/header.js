@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from '../../img/logo.png'
 import Search from './search/search'
 import Categories from './categories/categories'
 import MobileMenu from './mobile-menu/mobile-menu'
@@ -17,7 +16,7 @@ export default class Header extends Component {
             <div className="navbar-item">
               <img
                 className="image is-48x48"
-                src={logo}
+                src="/static/logo.png"
                 alt="Yourtopia"
                 height="48"
                 width="48"

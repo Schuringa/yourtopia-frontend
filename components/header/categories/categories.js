@@ -52,18 +52,24 @@ export default class Categories extends Component {
             className="categories"
           >
             <div className="columns is-multiline">
-              {data.topnavi.navigation_node.children[2].children.map(value => {
-                return (
-                  <div className="column category-list">
-                    <p className="has-text-weight-bold is-size-7">
-                      {value.name}
-                    </p>
-                    {value.children.map(value2 => {
-                      return <p className="is-size-7">{value2.name}</p>
-                    })}
-                  </div>
-                )
-              })}
+              {data.topnavi.navigation_node.children[2].children.map(
+                (value, index) => {
+                  return (
+                    <div key={index} className="column category-list">
+                      <p className="has-text-weight-bold is-size-7">
+                        {value.name}
+                      </p>
+                      {value.children.map((value, index) => {
+                        return (
+                          <p key={index} className="is-size-7">
+                            {value.name}
+                          </p>
+                        )
+                      })}
+                    </div>
+                  )
+                }
+              )}
             </div>
           </div>
         </div>

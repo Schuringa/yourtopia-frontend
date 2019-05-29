@@ -33,10 +33,7 @@ $app-height: calc(
 );
 
 @import '~bulma/bulma.sass';
-@import './materialdesignicons.min.css';
-@import '../components/categories/categories.scss';
 @import '../components/header/header.scss';
-@import '../components/mobile-menu/mobile-menu.scss';
 
 .input {
   border: none;
@@ -95,6 +92,7 @@ code {
 
 .footer {
   height: $footer-height;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 }
 
 .main {
