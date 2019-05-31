@@ -278,7 +278,7 @@
                     {
                       "uuid": "5ad1194b-bf07-40aa-b070-c3dba2d013b1",
                       "url_key": "/gift-cards/",
-                      "name": "Zalando Gift Cards",
+                      "name": "Schuringa Gift Cards",
                       "tracking_code": "gift-card",
                       "isTitle": false
                     }
@@ -563,7 +563,7 @@
                     {
                       "uuid": "6178961e-34a3-47fe-ac2d-23a9f5b91f0d",
                       "url_key": "/gift-cards/",
-                      "name": "Zalando Gift Cards",
+                      "name": "Schuringa Gift Cards",
                       "tracking_code": "gift-cards",
                       "isTitle": false
                     }
@@ -1342,7 +1342,7 @@
                     {
                       "uuid": "32421707-3bdb-4bd9-bbea-58fb59ad727e",
                       "url_key": "/step-into-marni/",
-                      "name": "MARNI x Zalando",
+                      "name": "MARNI x Schuringa",
                       "tracking_code": "marni",
                       "isTitle": false
                     },
@@ -1812,7 +1812,7 @@
                     {
                       "uuid": "002211b8-b858-470b-9e00-5c92427e9476",
                       "url_key": "/gift-cards/",
-                      "name": "Zalando Gift Cards",
+                      "name": "Schuringa Gift Cards",
                       "tracking_code": "gift-cards",
                       "isTitle": false
                     },
@@ -1832,9 +1832,9 @@
                     },
                     {
                       "uuid": "f0616239-3d87-462e-8b40-e1203c0cc3e5",
-                      "url_key": "https://www.zalando-lounge.co.uk/lp1?wmc=DIS_SON4&utm_source=zalando&utm_medium=headnavi&utm_campaign=headnavi&utm_content=headnavi&__action=${softLoginParam}",
-                      "name": "Zalando Lounge",
-                      "tracking_code": "zalando-lounge",
+                      "url_key": "https://www.Schuringa-lounge.co.uk/lp1?wmc=DIS_SON4&utm_source=Schuringa&utm_medium=headnavi&utm_campaign=headnavi&utm_content=headnavi&__action=${softLoginParam}",
+                      "name": "Schuringa Lounge",
+                      "tracking_code": "Schuringa-lounge",
                       "isTitle": false
                     },
                     {
@@ -2330,7 +2330,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/women/a6d4d9c7-ff03-418d-85f7-2eaae5517ada/1558346108133/",
                 "name": "Candy colours",
-                "url_key": "https://www.zalando.co.uk/collections/lnGmyqDKR3-/"
+                "url_key": "https://www.Schuringa.co.uk/collections/lnGmyqDKR3-/"
               },
               "children": [
                 {
@@ -2439,7 +2439,7 @@
                   ]
                 },
                 {
-                  "name": "New at Zalando",
+                  "name": "New at Schuringa",
                   "url_key": "",
                   "uuid": "7a57d041-b656-4d78-acb8-562a615480dd",
                   "type": "item",
@@ -2862,7 +2862,7 @@
                   "children": [
                     {
                       "name": "Safari look",
-                      "url_key": "https://www.zalando.co.uk/catalog/?camp=women_safari_travel_style",
+                      "url_key": "https://www.Schuringa.co.uk/catalog/?camp=women_safari_travel_style",
                       "uuid": "7111d37c-960f-44db-8ea5-84e8d6762012",
                       "type": "item",
                       "red": false,
@@ -2871,7 +2871,7 @@
                     },
                     {
                       "name": "Summer dresses",
-                      "url_key": "https://www.zalando.co.uk/catalog/?camp=trend_summerdresses_2019_18",
+                      "url_key": "https://www.Schuringa.co.uk/catalog/?camp=trend_summerdresses_2019_18",
                       "uuid": "ce5e9b0c-1e75-44ef-abdc-821c4feb0cdc",
                       "type": "item",
                       "red": false,
@@ -2880,7 +2880,7 @@
                     },
                     {
                       "name": "Milkmaid blouses",
-                      "url_key": "https://www.zalando.co.uk/catalog/?camp=women_trend",
+                      "url_key": "https://www.Schuringa.co.uk/catalog/?camp=women_trend",
                       "uuid": "2561b9de-241c-46f7-af38-97ced1f4162e",
                       "type": "item",
                       "red": false,
@@ -2898,7 +2898,7 @@
                     },
                     {
                       "name": "Sustainable fashion",
-                      "url_key": "https://www.zalando.co.uk/women/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/women/?sustainable=yes",
                       "uuid": "0dfe94f6-7847-4d13-9f5b-d998e4b73bea",
                       "type": "item",
                       "tracking_code": "sustainable-fashion",
@@ -2962,7 +2962,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/women/ac87c536-5d2d-409c-8be0-8103132a3eb6/1554909575347/",
                 "name": "Trench coats",
-                "url_key": "https://www.zalando.co.uk/womens-clothing-coats-trench-coats/?order=activation_date"
+                "url_key": "https://www.Schuringa.co.uk/womens-clothing-coats-trench-coats/?order=activation_date"
               }
             },
             {
@@ -3141,7 +3141,7 @@
                   "children": [
                     {
                       "name": "Colour block chunky runners",
-                      "url_key": "https://www.zalando.co.uk/catalog/?camp=colour_block_chunky_sneakers_2019_02",
+                      "url_key": "https://www.Schuringa.co.uk/catalog/?camp=colour_block_chunky_sneakers_2019_02",
                       "uuid": "6ca238c6-0092-460b-8def-37a177b5fa5e",
                       "type": "item",
                       "red": false,
@@ -3150,7 +3150,7 @@
                     },
                     {
                       "name": "Espadrilles",
-                      "url_key": "https://www.zalando.co.uk/womens-shoes-espadrilles/?order=activation_date",
+                      "url_key": "https://www.Schuringa.co.uk/womens-shoes-espadrilles/?order=activation_date",
                       "uuid": "091eac43-27f0-426d-97d0-87aeea0fb318",
                       "type": "item",
                       "red": false,
@@ -3159,7 +3159,7 @@
                     },
                     {
                       "name": "Trendy sandals",
-                      "url_key": "https://www.zalando.co.uk/catalog/?camp=sandals_for_vacation_2019_14",
+                      "url_key": "https://www.Schuringa.co.uk/catalog/?camp=sandals_for_vacation_2019_14",
                       "uuid": "f6156a75-2542-493e-9f51-15d051b0df36",
                       "type": "item",
                       "red": false,
@@ -3503,7 +3503,7 @@
                     {
                       "uuid": "bcf3fc59-f274-44ec-a58f-c596a580f522",
                       "url_key": "/giftvouchers/",
-                      "name": "Zalando Gift Cards",
+                      "name": "Schuringa Gift Cards",
                       "tracking_code": "gift-cards",
                       "isTitle": false
                     },
@@ -3569,7 +3569,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/women/8cbe1a32-4225-490d-af4e-385ca7fbe94a/1554911262508/",
                 "name": "Shell jewellery",
-                "url_key": "https://www.zalando.co.uk/collections/d579mVOzQmC/"
+                "url_key": "https://www.Schuringa.co.uk/collections/d579mVOzQmC/"
               }
             },
             {
@@ -3639,7 +3639,7 @@
                     },
                     {
                       "name": "Swimming",
-                      "url_key": "https://www.zalando.co.uk/sports-womens/?sport_type=swimming",
+                      "url_key": "https://www.Schuringa.co.uk/sports-womens/?sport_type=swimming",
                       "uuid": "fb542f23-254d-4408-a7b9-61aad46fc798",
                       "type": "item",
                       "red": false,
@@ -3737,7 +3737,7 @@
                     },
                     {
                       "name": "Sustainability",
-                      "url_key": "https://www.zalando.co.uk/sports-womens/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/sports-womens/?sustainable=yes",
                       "uuid": "cb1cb6c0-944a-40ec-bac0-e8fe7df53528",
                       "type": "item",
                       "tracking_code": "sustainability-sports",
@@ -3859,7 +3859,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/women/98d0a7dc-db8e-40d4-84c0-0615d9635018/1558343398470/",
                 "name": "Nike: Plus Size",
-                "url_key": "https://www.zalando.co.uk/womens-sports-clothing/nike-performance/?assortment_area=plus-size&order=activation_date"
+                "url_key": "https://www.Schuringa.co.uk/womens-sports-clothing/nike-performance/?assortment_area=plus-size&order=activation_date"
               }
             },
             {
@@ -3871,7 +3871,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/women/dea3364e-ee89-49e3-89af-6f86f9c44690/1554910988048/",
                 "name": "Pastel hues",
-                "url_key": "https://www.zalando.co.uk/collections/lZwZl5IZRn-/"
+                "url_key": "https://www.Schuringa.co.uk/collections/lZwZl5IZRn-/"
               },
               "children": [
                 {
@@ -3951,7 +3951,7 @@
                     },
                     {
                       "name": "Sustainable fashion",
-                      "url_key": "https://www.zalando.co.uk/premium-womens/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/premium-womens/?sustainable=yes",
                       "uuid": "b86b5fdc-c60b-48c5-81cd-cf52d75781f9",
                       "type": "item",
                       "red": false,
@@ -3960,7 +3960,7 @@
                     },
                     {
                       "name": "Sportswear",
-                      "url_key": "https://www.zalando.co.uk/collections/_PfaaN5OQqG/?order=activation_date",
+                      "url_key": "https://www.Schuringa.co.uk/collections/_PfaaN5OQqG/?order=activation_date",
                       "uuid": "40455a9a-2b34-4383-9bb0-4892b9249b52",
                       "type": "item",
                       "red": false,
@@ -4456,7 +4456,7 @@
                     },
                     {
                       "name": "Sustainability",
-                      "url_key": "https://www.zalando.co.uk/women/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/women/?sustainable=yes",
                       "uuid": "82d9b3e4-750e-4d37-97ba-7e4fcc6a517d",
                       "type": "item",
                       "red": false,
@@ -4557,7 +4557,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/women/e149a8be-c3c0-4628-b118-32645047825d/1554910424383/",
                 "name": "Heels on sale",
-                "url_key": "https://www.zalando.co.uk/womens-high-heels-sale/?sale=true"
+                "url_key": "https://www.Schuringa.co.uk/womens-high-heels-sale/?sale=true"
               },
               "children": [
                 {
@@ -5319,8 +5319,8 @@
                 {
                   "uuid": "668d6a3e-2e14-4a68-bae1-436aa8f1542d",
                   "url_key": "",
-                  "name": "New at Zalando",
-                  "tracking_code": "newzalando",
+                  "name": "New at Schuringa",
+                  "tracking_code": "newSchuringa",
                   "isTitle": true,
                   "children": [
                     {
@@ -5405,7 +5405,7 @@
                     },
                     {
                       "name": "Sustainable Fashion",
-                      "url_key": "https://www.zalando.co.uk/men/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/men/?sustainable=yes",
                       "uuid": "69c17a59-b4bc-4563-b677-57b828fb9a5a",
                       "type": "item",
                       "red": false,
@@ -5535,7 +5535,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/men/f617c7b6-90b8-4ee6-ac80-d8caa8389b25/1558346178918/",
                 "name": "The colour edit",
-                "url_key": "https://www.zalando.co.uk/collections/0X9tv8TBR56/"
+                "url_key": "https://www.Schuringa.co.uk/collections/0X9tv8TBR56/"
               }
             },
             {
@@ -5734,7 +5734,7 @@
                   "children": [
                     {
                       "name": "Polo shirts",
-                      "url_key": "https://www.zalando.co.uk/mens-clothing-polo-shirts/?order=activation_date",
+                      "url_key": "https://www.Schuringa.co.uk/mens-clothing-polo-shirts/?order=activation_date",
                       "uuid": "d8db711c-2875-4a1c-b899-5fe8234a7a88",
                       "type": "item",
                       "red": false,
@@ -6292,7 +6292,7 @@
                     {
                       "uuid": "132494ae-4b9a-42c6-977a-895764470625",
                       "url_key": "/gift-cards/",
-                      "name": "Zalando Gift Cards",
+                      "name": "Schuringa Gift Cards",
                       "tracking_code": "gift-cards",
                       "isTitle": false
                     },
@@ -6411,7 +6411,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/men/cfff4e0f-7055-4b0b-b65d-1740deea3313/1556625959606/",
                 "name": "Sunglasses",
-                "url_key": "https://www.zalando.co.uk/mens-sunglasses/?order=activation_date"
+                "url_key": "https://www.Schuringa.co.uk/mens-sunglasses/?order=activation_date"
               }
             },
             {
@@ -6441,7 +6441,7 @@
                     },
                     {
                       "name": "American Sports",
-                      "url_key": "https://www.zalando.co.uk/sports-mens/?sport_type=american_sports",
+                      "url_key": "https://www.Schuringa.co.uk/sports-mens/?sport_type=american_sports",
                       "uuid": "a30f8a22-2796-4f67-9fc8-b02404716e73",
                       "type": "item",
                       "tracking_code": "american-sports",
@@ -6499,7 +6499,7 @@
                     },
                     {
                       "name": "Swimming",
-                      "url_key": "https://www.zalando.co.uk/sports-mens/?sport_type=swimming",
+                      "url_key": "https://www.Schuringa.co.uk/sports-mens/?sport_type=swimming",
                       "uuid": "6bb23b1d-3abd-48fc-9eb0-85b0ffafb203",
                       "type": "item",
                       "tracking_code": "swimming-men",
@@ -6593,7 +6593,7 @@
                     },
                     {
                       "name": "Sustainability",
-                      "url_key": "https://www.zalando.co.uk/sports-mens/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/sports-mens/?sustainable=yes",
                       "uuid": "b2b1a329-ba55-47d7-b0e6-764b6bad3daa",
                       "type": "item",
                       "tracking_code": "sustainability-sports",
@@ -6703,7 +6703,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/men/c837191e-de74-4c19-b498-0f4835ac5699/1555594612701/",
                 "name": "Earth Day: Get Outdoors",
-                "url_key": "https://www.zalando.co.uk/mens-sports-clothing/?sport_type=outdoor&sustainable=yes"
+                "url_key": "https://www.Schuringa.co.uk/mens-sports-clothing/?sport_type=outdoor&sustainable=yes"
               }
             },
             {
@@ -6715,7 +6715,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/men/eea4614a-213f-4f29-a9eb-811928b4048a/1556626101756/",
                 "name": "Designer suits",
-                "url_key": "https://www.zalando.co.uk/collections/Nznqo7W8QcS/?order=activation_date"
+                "url_key": "https://www.Schuringa.co.uk/collections/Nznqo7W8QcS/?order=activation_date"
               },
               "children": [
                 {
@@ -6809,7 +6809,7 @@
                     },
                     {
                       "name": "Sustainable fashion",
-                      "url_key": "https://www.zalando.co.uk/premium-mens/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/premium-mens/?sustainable=yes",
                       "uuid": "257ae608-57f3-4810-b60d-73eb75213b20",
                       "type": "item",
                       "red": false,
@@ -6818,7 +6818,7 @@
                     },
                     {
                       "name": "Sportswear",
-                      "url_key": "https://www.zalando.co.uk/collections/94ZNKiqWQv2/?order=activation_date",
+                      "url_key": "https://www.Schuringa.co.uk/collections/94ZNKiqWQv2/?order=activation_date",
                       "uuid": "715aebf2-2547-4c0c-8594-2d7a6b614fe4",
                       "type": "item",
                       "red": false,
@@ -7285,7 +7285,7 @@
                     },
                     {
                       "name": "Sustainable",
-                      "url_key": "https://www.zalando.co.uk/men/?sustainable=yes",
+                      "url_key": "https://www.Schuringa.co.uk/men/?sustainable=yes",
                       "uuid": "a8f3eb84-e7ef-4f0a-9385-ab5de35be350",
                       "type": "item",
                       "red": false,
@@ -7379,7 +7379,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/men/fd6b50ba-f8b2-4ea2-910e-c32618a932e4/1556626264393/",
                 "name": "Trainers on sale",
-                "url_key": "https://www.zalando.co.uk/mens-trainers-sale/?sale=true"
+                "url_key": "https://www.Schuringa.co.uk/mens-trainers-sale/?sale=true"
               },
               "children": [
                 {
@@ -7611,9 +7611,9 @@
                 },
                 {
                   "uuid": "b17ec724-7765-4355-afe0-be66c24f75aa",
-                  "url_key": "https://www.zalando-lounge.co.uk/lp1?&utm_source=zalando&utm_medium=headnavi&utm_campaign=headnavi&utm_content=headnavi&__action=${softLoginParam}",
-                  "name": "Zalando Lounge",
-                  "tracking_code": "zalando-lounge",
+                  "url_key": "https://www.Schuringa-lounge.co.uk/lp1?&utm_source=Schuringa&utm_medium=headnavi&utm_campaign=headnavi&utm_content=headnavi&__action=${softLoginParam}",
+                  "name": "Schuringa Lounge",
+                  "tracking_code": "Schuringa-lounge",
                   "isTitle": true,
                   "children": [
                     {
@@ -8300,7 +8300,7 @@
               "image_link": {
                 "image": "https://mosaic02.ztat.net/nvg/z-header-fragment/images/production/en-GB/kids/b52285d9-594d-4aaf-b958-aa7dd500176c/1546499857416/",
                 "name": "Sneaker Hot Drops",
-                "url_key": "https://www.zalando.co.uk/kids-shoes-trainers/?activation_date=0-30.0-7.7-14&season_name=spring-summer&order=activation_date"
+                "url_key": "https://www.Schuringa.co.uk/kids-shoes-trainers/?activation_date=0-30.0-7.7-14&season_name=spring-summer&order=activation_date"
               }
             },
             {
@@ -9783,11 +9783,11 @@
                   ]
                 },
                 {
-                  "name": "Zalando Lounge",
-                  "url_key": "https://www.zalando-lounge.co.uk/lp1?&utm_source=zalando&utm_medium=headnavi&utm_campaign=headnavi&utm_content=headnavi&__action=${softLoginParam}",
+                  "name": "Schuringa Lounge",
+                  "url_key": "https://www.Schuringa-lounge.co.uk/lp1?&utm_source=Schuringa&utm_medium=headnavi&utm_campaign=headnavi&utm_content=headnavi&__action=${softLoginParam}",
                   "uuid": "c139a69b-e1e6-4ec7-90bd-371dafff2386",
                   "type": "item",
-                  "tracking_code": "zalando-lounge",
+                  "tracking_code": "Schuringa-lounge",
                   "isTitle": true,
                   "children": []
                 }
