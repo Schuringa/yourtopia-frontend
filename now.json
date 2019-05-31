@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "yourtopia-staging",
+  "name": "ecommerce-experiment",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "routes": [
     {
