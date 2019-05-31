@@ -66,10 +66,10 @@ export default class MobileMenu extends Component {
           <span aria-hidden="true" />
         </span>
         <div
-          style={{ width: `${displayMenu ? '250px' : '0'}` }}
+          style={{ width: `${displayMenu ? '100%' : '0'}` }}
           className="mobile-menu is-hidden-tablet"
         >
-          Testing
+          <div className="menu-item">Testing</div>
         </div>
       </span>
     )

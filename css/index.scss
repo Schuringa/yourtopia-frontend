@@ -58,8 +58,10 @@ code {
 
 .main {
   min-height: $app-height;
+  margin-top: $navbar-height;
   @media screen and (max-width: $tablet) {
     min-height: $app-height-touch;
+    margin-top: $navbar-height-touch;
   }
   padding: 2em;
 }
@@ -118,7 +120,7 @@ $cursors: (
 }
 
 // Overlay
-.overlay-desktop {
+.overlay {
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -130,7 +132,7 @@ $cursors: (
   background-color: rgba(0, 0, 0, 0.2); /* Black background with opacity */
 }
 
-.overlay-desktop-open {
+.overlay-open {
   opacity: 1;
   visibility: visible;
   position: fixed;

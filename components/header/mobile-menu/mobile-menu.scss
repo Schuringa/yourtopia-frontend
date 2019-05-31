@@ -1,14 +1,18 @@
 .mobile-menu {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   left: 0;
   top: $navbar-height-touch;
-  height: $app-height;
+  height: 100%;
   background: white;
   transition: width 0.3s ease-in-out;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
 }
 
 .menu-button {
   width: 4rem;
+}
+
+.menu-item {
+  padding: 1em;
+  background: $grey-lighter;
 }
