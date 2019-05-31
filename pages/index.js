@@ -1,6 +1,7 @@
 // pages/index.js
 import React from 'react'
 import Default from '../layouts/default'
+import Products from '../layouts/products'
 import '../css/index.scss'
 import axios from 'axios'
 const meta = { title: 'Yourtopia Staging', description: 'Staging site' }
@@ -30,7 +31,7 @@ class IndexPage extends React.Component {
   render () {
     return (
       <Default meta={meta}>
-        <div />
+        <Products />
       </Default>
     )
   }
