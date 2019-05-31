@@ -56,13 +56,20 @@ export default class Categories extends Component {
                 (value, index) => {
                   return (
                     <div key={index} className="column category-list">
-                      <p className="has-text-weight-bold is-size-7">
-                        {value.name}
+                      <p>
+                        <a
+                          href={value.url_key}
+                          className="has-text-weight-bold is-size-7"
+                        >
+                          {value.name}
+                        </a>
                       </p>
                       {value.children.map((value, index) => {
                         return (
-                          <p key={index} className="is-size-7">
-                            {value.name}
+                          <p key={index}>
+                            <a href={value.url_key} className="is-size-7">
+                              {value.name}
+                            </a>
                           </p>
                         )
                       })}
