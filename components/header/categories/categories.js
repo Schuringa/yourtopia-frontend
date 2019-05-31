@@ -27,10 +27,7 @@ export default class Categories extends Component {
     const { displayCategories } = this.state
     return (
       <React.Fragment>
-        <div
-          // style={{ opacity: `${displayCategories ? '1' : '0'}` }}
-          className={`${displayCategories ? 'overlay-open' : 'overlay'}`}
-        />
+        <div className={`${displayCategories ? 'overlay-open' : 'overlay'}`} />
         <div className="column is-paddingless">
           <div
             onMouseLeave={this.hideCategories}
@@ -43,11 +40,7 @@ export default class Categories extends Component {
                     displayCategories ? 'is-active' : ''
                   }`}
                 >
-                  <a
-                    href="/"
-                    onMouseEnter={this.showCategories}
-                    className="is-size-7"
-                  >
+                  <a onMouseEnter={this.showCategories} className="is-size-7">
                     Categories
                   </a>
                 </li>
