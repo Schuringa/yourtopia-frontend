@@ -12,6 +12,10 @@
   width: 4rem;
 }
 
+.navbar-burger:hover {
+  background-color: transparent;
+}
+
 .menu-item {
   padding: 1em;
   background: $grey-lighter;
