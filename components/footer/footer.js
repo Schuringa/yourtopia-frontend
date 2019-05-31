@@ -7,17 +7,17 @@ export default class Footer extends Component {
       <footer className="footer">
         <div className="has-text-centered">
           <span className="footer-item is-size-7">
-            <Link prefetch href="/about">
+            <Link href="/about">
               <a>About</a>
             </Link>
           </span>
           <span className="footer-item is-size-7">
-            <Link prefetch href="/contact-us">
+            <Link href="/contact-us">
               <a>Contact</a>
             </Link>
           </span>
           <span className="footer-item is-size-7">
-            <Link prefetch href="/terms-and-conditions">
+            <Link href="/terms-and-conditions">
               <a>Terms & Conditions</a>
             </Link>
           </span>
