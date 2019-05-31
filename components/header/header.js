@@ -18,7 +18,7 @@ export default class Header extends Component {
               <img
                 className="image is-48x48"
                 src="/static/logo.png"
-                alt="Yourtopia"
+                alt="Schuringa"
                 height="48"
                 width="48"
               />
@@ -27,7 +27,7 @@ export default class Header extends Component {
                 style={{ padding: '0.5em' }}
                 className="title has-text-weight-bold is-6 has-text-grey-dark"
               >
-                YOURTOPIA
+                Schuringa
               </span>
             </div>
           </Link>
