@@ -7,5 +7,6 @@
       "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
       "headers": { "cache-control": "immutable,max-age=31536000" }
     }
-  ]
+  ],
+  "alias": ["schuringa.xyz"]
 }
