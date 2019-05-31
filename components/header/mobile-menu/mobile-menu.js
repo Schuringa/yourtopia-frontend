@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from 'body-scroll-lock'
 
 export default class MobileMenu extends Component {
   constructor (props) {
@@ -7,17 +12,19 @@ export default class MobileMenu extends Component {
       displayMenu: false
     }
     this.hideMenu = this.hideMenu.bind(this)
-    this.toggleMenu = this.toggleMenu.bind(this)
+    this.showMenu = this.showMenu.bind(this)
     this.setWrapperRef = this.setWrapperRef.bind(this)
     this.handleClickOutside = this.handleClickOutside.bind(this)
   }
 
   componentDidMount () {
+    this.targetElement = document.querySelector('#mobile-menu')
     document.addEventListener('mousedown', this.handleClickOutside)
   }
 
   componentWillUnmount () {
     document.removeEventListener('mousedown', this.handleClickOutside)
+    clearAllBodyScrollLocks()
   }
 
   /**
@@ -40,12 +47,14 @@ export default class MobileMenu extends Component {
     this.setState({
       displayMenu: false
     })
+    enableBodyScroll(this.targetElement)
   }
 
-  toggleMenu () {
-    this.setState(prevState => ({
-      displayMenu: !prevState.displayMenu
-    }))
+  showMenu () {
+    this.setState({
+      displayMenu: true
+    })
+    disableBodyScroll(this.targetElement)
   }
 
   render () {
@@ -59,16 +68,47 @@ export default class MobileMenu extends Component {
           }`}
           aria-label="menu"
           aria-expanded="false"
-          onClick={this.toggleMenu}
+          onClick={displayMenu ? this.hideMenu : this.showMenu}
         >
           <span aria-hidden="true" />
           <span aria-hidden="true" />
           <span aria-hidden="true" />
         </span>
         <div
+          id="mobile-menu"
           style={{ width: `${displayMenu ? '100%' : '0'}` }}
           className="mobile-menu is-hidden-tablet"
         >
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
+          <div className="menu-item">Testing</div>
           <div className="menu-item">Testing</div>
         </div>
       </span>
