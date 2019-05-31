@@ -28,8 +28,10 @@ export default class Categories extends Component {
     return (
       <React.Fragment>
         <div
-          style={{ opacity: `${displayCategories ? '1' : '0'}` }}
-          className="overlay-desktop"
+          // style={{ opacity: `${displayCategories ? '1' : '0'}` }}
+          className={`${
+            displayCategories ? 'overlay-desktop-open' : 'overlay-desktop'
+          }`}
         />
         <div className="column is-paddingless">
           <div
