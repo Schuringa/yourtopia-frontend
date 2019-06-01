@@ -1,8 +1,10 @@
 import React from 'react'
 import ProductCard from '../components/product/product-card'
+import Breadcrumb from '../components/breadcrumb/breadcrumb'
 export default ({ children }) => (
   <div>
-    <h1 className="title">Products:</h1>
+    <Breadcrumb />
+    <h1 className="title">Category Name:</h1>
     <div className="columns is-multiline is-mobile">
       <ProductCard />
       <ProductCard />
