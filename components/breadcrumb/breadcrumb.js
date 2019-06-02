@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Breadcrumb extends Component {
   render () {
     return (
-      <nav class="breadcrumb" aria-label="breadcrumbs">
+      <nav className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
             <a href="#">Bulma</a>
