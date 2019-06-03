@@ -18,7 +18,7 @@ export default class Header extends Component {
               <img
                 className="image is-48x48"
                 src="/static/logo.png"
-                alt="Schuringa"
+                alt="Price Help"
                 height="48"
                 width="48"
               />
