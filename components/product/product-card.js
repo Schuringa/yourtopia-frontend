@@ -1,32 +1,25 @@
 import React, { Component } from 'react'
+import OpenInNewIcon from 'mdi-react/OpenInNewIcon'
 
 export default class ProductCard extends Component {
   render () {
     return (
-      <div className="column is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd card-custom">
+      <div className="column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd">
         <div className="card">
           <div className="card-image">
             <figure className="image is-4by3" />
           </div>
           <div className="card-content">
-            <div className="media">
-              <div className="media-left">
-                <figure className="image is-48x48">
-                  <img
-                    src="https://bulma.io/images/placeholders/96x96.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div className="media-content">
-                <p className="title is-4">John Smith</p>
-                <p className="subtitle is-6">@johnsmith</p>
-              </div>
-            </div>
-
-            <div className="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris.
+            <div className="media-content">
+              <p className="is-6">John Smith</p>
+              <span className="subtitle is-7 has-text-danger">$492 </span>
+              <a className="subtitle is-7 has-text-grey-light">- Fetch</a>
+              <span
+                style={{ verticalAlign: 'middle' }}
+                className="icon is-small has-text-grey-light"
+              >
+                <OpenInNewIcon size="0.75em" />
+              </span>
             </div>
           </div>
         </div>

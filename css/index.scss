@@ -40,7 +40,7 @@ $app-height-touch: calc(
 @import '~bulma/bulma.sass';
 @import '../components/header/header.scss';
 @import '../components/footer/footer.scss';
-@import '../components/product/product.scss';
+@import '../components/filters/filters.scss';
 
 body {
   margin: 0;
@@ -59,11 +59,12 @@ code {
 .main {
   min-height: $app-height;
   margin-top: $navbar-height;
+  padding: 2em;
   @media screen and (max-width: $tablet) {
     min-height: $app-height-touch;
     margin-top: $navbar-height-touch;
+    padding: 0.85em;
   }
-  padding: 2em;
 }
 
 // Inputs
@@ -149,6 +150,10 @@ $cursors: (
   visibility: visible;
   position: fixed;
   transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
   top: $navbar-height;
   left: 0;
   right: 0;

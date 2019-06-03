@@ -1,11 +1,18 @@
 .mobile-menu {
   position: fixed;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   left: 0;
   top: $navbar-height-touch;
   height: 100%;
   background: white;
   transition: width 0.3s ease-in-out;
+}
+
+.mobile-menu-content {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .menu-button {
@@ -14,9 +21,4 @@
 
 .navbar-burger:hover {
   background-color: transparent;
-}
-
-.menu-item {
-  padding: 1em;
-  background: $grey-lighter;
 }
