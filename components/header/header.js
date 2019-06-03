@@ -27,7 +27,7 @@ export default class Header extends Component {
                 style={{ padding: '0.5em' }}
                 className="title has-text-weight-bold is-6 has-text-grey-dark"
               >
-                Schuringa
+                Price Help
               </span>
             </div>
           </Link>
