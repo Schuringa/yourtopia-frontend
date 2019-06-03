@@ -13,6 +13,7 @@ export default class Default extends Component {
     this.setState({ blockTransition: false })
   }
   render () {
+    console.log(this.state.blockTransition)
     return (
       <div className={`${this.state.blockTransition ? 'preload' : ''}`}>
         <Meta props={this.props.meta} />
