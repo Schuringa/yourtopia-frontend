@@ -2,7 +2,6 @@
 import React from 'react'
 import Default from '../layouts/default'
 import Products from '../layouts/products'
-import '../css/index.scss'
 import axios from 'axios'
 const meta = { title: 'Price Help Staging', description: 'Staging site' }
 
