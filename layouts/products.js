@@ -6,13 +6,30 @@ import FilterMobile from '../components/filters/filters-mobile'
 export default ({ children }) => (
   <React.Fragment>
     <div className="columns">
-      <div className="column is-narrow">
+      <div className="column is-hidden-mobile  is-narrow">
         <Filter />
       </div>
       <div className="column">
         <Breadcrumb />
         <h1 className="title">Category Name:</h1>
-        <FilterMobile />
+        <div className="level is-mobile">
+          <div className="level-left">
+            <div className="level-item is-hidden-tablet ">
+              <FilterMobile />
+            </div>
+          </div>
+          <div className="level-right">
+            <div className="level-item">
+              <div className="select">
+                <select>
+                  <option>Sort By</option>
+                  <option>With options</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="columns is-variable is-1-mobile is-multiline is-mobile">
           <ProductCard />
           <ProductCard />
@@ -26,7 +43,6 @@ export default ({ children }) => (
         </div>
       </div>
     </div>
-
     {children}
   </React.Fragment>
 )

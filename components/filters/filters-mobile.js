@@ -26,8 +26,8 @@ export default class FilterMobile extends Component {
   render () {
     const { displayFilters } = this.state
     return (
-      <div className="is-hidden-tablet">
-        <div className="mobile-filter-button">
+      <React.Fragment>
+        <div>
           <button onClick={this.showFilters} className="button">
             <span>Filters</span>
             <span className="icon">
@@ -95,7 +95,7 @@ export default class FilterMobile extends Component {
             </ul>
           </aside>
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }
