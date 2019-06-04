@@ -1,6 +1,5 @@
 // components/meta.js
 import Head from 'next/head'
-import '../css/index.scss'
 export default ({ props }) => (
   <div>
     <Head>

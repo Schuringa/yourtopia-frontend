@@ -3,6 +3,7 @@ import React from 'react'
 import Default from '../layouts/default'
 import Products from '../layouts/products'
 import axios from 'axios'
+import '../css/index.scss'
 const meta = { title: 'Price Help Staging', description: 'Staging site' }
 
 class IndexPage extends React.Component {
