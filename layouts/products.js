@@ -4,7 +4,7 @@ import Breadcrumb from '../components/breadcrumb/breadcrumb'
 import Filter from '../components/filters/filters'
 import FilterMobile from '../components/filters/filters-mobile'
 export default ({ children }) => (
-  <div>
+  <React.Fragment>
     <div className="columns">
       <div className="column is-narrow">
         <Filter />
@@ -28,5 +28,5 @@ export default ({ children }) => (
     </div>
 
     {children}
-  </div>
+  </React.Fragment>
 )
