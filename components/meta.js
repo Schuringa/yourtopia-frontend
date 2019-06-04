@@ -5,7 +5,6 @@ export default ({ props }) => (
     <Head>
       <title>{props.title || 'Next.js Test Title'}</title>
       <link rel="icon" type="image/x-icon" href="../static/favicon.ico" />
-      <link href="css/index.css" rel="stylesheet" />
       <meta
         name="description"
         content={props.description || 'Next.js Test Description'}

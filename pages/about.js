@@ -1,5 +1,5 @@
 import Default from '../layouts/default'
-import '../css/index.scss'
+import '../styles.scss'
 const meta = { title: 'About us', description: 'Staging site' }
 
 export default () => (
