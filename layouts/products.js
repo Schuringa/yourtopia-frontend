@@ -11,7 +11,9 @@ export default ({ children }) => (
       </div>
       <div className="column">
         <Breadcrumb />
-        <h1 className="title">Category Name:</h1>
+        <h1 className="title is-size-5" style={{ marginBottom: '0.75em' }}>
+          Clothing
+        </h1>
         <div className="level is-mobile">
           <div className="level-left">
             <div className="level-item is-hidden-tablet ">
@@ -20,7 +22,7 @@ export default ({ children }) => (
           </div>
           <div className="level-right">
             <div className="level-item">
-              <div className="select">
+              <div className="select is-small">
                 <select>
                   <option>Sort By</option>
                   <option>With options</option>

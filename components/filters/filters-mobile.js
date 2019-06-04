@@ -36,15 +36,15 @@ export default class FilterMobile extends Component {
           </button>
         </div>
         <div
-          class="menu is-size-7 mobile-filters"
+          className="menu is-size-7 mobile-filters"
           style={{
             width: `${displayFilters ? '300px' : '0'}`,
             height: `${displayFilters ? '100vh' : '0'}`
           }}
         >
           <aside className="filter-menu-content">
-            <p class="menu-label">General</p>
-            <ul class="menu-list">
+            <p className="menu-label">General</p>
+            <ul className="menu-list">
               <li>
                 <a>Dashboard</a>
               </li>
@@ -52,13 +52,13 @@ export default class FilterMobile extends Component {
                 <a>Customers</a>
               </li>
             </ul>
-            <p class="menu-label">Administration</p>
-            <ul class="menu-list">
+            <p className="menu-label">Administration</p>
+            <ul className="menu-list">
               <li>
                 <a>Team Settings</a>
               </li>
               <li>
-                <a class="is-active">Manage Your Team</a>
+                <a className="is-active">Manage Your Team</a>
                 <ul>
                   <li>
                     <a>Members</a>
@@ -81,8 +81,8 @@ export default class FilterMobile extends Component {
                 <a>Authentication</a>
               </li>
             </ul>
-            <p class="menu-label">Transactions</p>
-            <ul class="menu-list">
+            <p className="menu-label">Transactions</p>
+            <ul className="menu-list">
               <li>
                 <a>Payments</a>
               </li>

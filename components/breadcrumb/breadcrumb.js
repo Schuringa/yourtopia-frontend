@@ -3,7 +3,11 @@ import React, { Component } from 'react'
 export default class Breadcrumb extends Component {
   render () {
     return (
-      <nav className="breadcrumb is-size-7" aria-label="breadcrumbs">
+      <nav
+        className="breadcrumb is-size-7"
+        style={{ marginBottom: '1em' }}
+        aria-label="breadcrumbs"
+      >
         <ul>
           <li>
             <a href="#">Mens</a>
