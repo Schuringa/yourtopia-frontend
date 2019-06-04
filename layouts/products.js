@@ -11,12 +11,18 @@ export default ({ children }) => (
       </div>
       <div className="column">
         <Breadcrumb />
-        <h1 className="title is-size-5" style={{ marginBottom: '0.75em' }}>
+        <h1
+          className="is-size-5 is-hidden-tablet"
+          style={{ marginBottom: '0.75em' }}
+        >
           Clothing
         </h1>
         <div className="level is-mobile">
           <div className="level-left">
-            <div className="level-item is-hidden-tablet ">
+            <div className="level-item is-hidden-mobile">
+              <h1 className="is-size-5">Clothing</h1>
+            </div>
+            <div className="level-item is-hidden-tablet">
               <FilterMobile />
             </div>
           </div>

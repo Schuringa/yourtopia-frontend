@@ -28,7 +28,7 @@ export default class FilterMobile extends Component {
     return (
       <React.Fragment>
         <div>
-          <button onClick={this.showFilters} className="button">
+          <button onClick={this.showFilters} className="button is-small">
             <span>Filters</span>
             <span className="icon">
               <TuneIcon size="1em" />
