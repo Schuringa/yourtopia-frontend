@@ -3,56 +3,58 @@ import React, { Component } from 'react'
 export default class Filter extends Component {
   render () {
     return (
-      <aside class="menu " style={{ width: '200px' }}>
-        <p class="menu-label is-size-6">Filters</p>
-        <p class="menu-label is-size-7">General</p>
-        <ul class="menu-list is-size-7">
+      <aside className="menu " style={{ width: '200px' }}>
+        <p className="menu-label is-size-6">Filters</p>
+        <p className="menu-label is-size-7">Collection</p>
+        <ul className="menu-list is-size-7">
           <li>
-            <a>Dashboard</a>
+            <a>Spring</a>
           </li>
           <li>
-            <a>Customers</a>
+            <a>Summer</a>
+          </li>
+          <li>
+            <a>Winter</a>
           </li>
         </ul>
-        <p class="menu-label is-size-7">Administration</p>
-        <ul class="menu-list is-size-7">
+        <p className="menu-label is-size-7">Color</p>
+        <ul className="menu-list is-size-7">
           <li>
-            <a>Team Settings</a>
-          </li>
-          <li>
-            <a class="is-active">Manage Your Team</a>
             <ul>
               <li>
-                <a>Members</a>
+                <a>Blue</a>
               </li>
               <li>
-                <a>Plugins</a>
+                <a>Red</a>
               </li>
               <li>
-                <a>Add a member</a>
+                <a>Green</a>
               </li>
             </ul>
           </li>
+        </ul>
+        <p className="menu-label is-size-7">Occasion</p>
+        <ul className="menu-list is-size-7">
           <li>
-            <a>Invitations</a>
+            <a>Business</a>
           </li>
           <li>
-            <a>Cloud Storage Environment Settings</a>
+            <a>Evening</a>
           </li>
           <li>
-            <a>Authentication</a>
+            <a>Leisure</a>
           </li>
         </ul>
-        <p class="menu-label is-size-7">Transactions</p>
-        <ul class="menu-list is-size-7">
+        <p className="menu-label is-size-7">Material</p>
+        <ul className="menu-list is-size-7">
           <li>
-            <a>Payments</a>
+            <a>Cotton</a>
           </li>
           <li>
-            <a>Transfers</a>
+            <a>Denim</a>
           </li>
           <li>
-            <a>Balance</a>
+            <a>Fleece</a>
           </li>
         </ul>
       </aside>
