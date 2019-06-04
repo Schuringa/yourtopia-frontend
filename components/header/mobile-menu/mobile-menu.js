@@ -77,12 +77,12 @@ export default class MobileMenu extends Component {
         <div
           id="mobile-menu"
           style={{ width: `${displayMenu ? '100%' : '0'}` }}
-          className="mobile-menu is-hidden-tablet"
+          className="mobile-menu has-background-white-ter is-hidden-tablet"
         >
-          <aside class="menu mobile-menu-content">
+          <aside className="menu mobile-menu-content">
             <div style={{ padding: '1em' }}>
-              <p class="menu-label">General</p>
-              <ul class="menu-list">
+              <p className="menu-label">General</p>
+              <ul className="menu-list">
                 <li>
                   <a>Dashboard</a>
                 </li>
@@ -90,13 +90,13 @@ export default class MobileMenu extends Component {
                   <a>Customers</a>
                 </li>
               </ul>
-              <p class="menu-label">Administration</p>
-              <ul class="menu-list">
+              <p className="menu-label">Administration</p>
+              <ul className="menu-list">
                 <li>
                   <a>Team Settings</a>
                 </li>
                 <li>
-                  <a class="is-active">Manage Your Team</a>
+                  <a className="is-active">Manage Your Team</a>
                   <ul>
                     <li>
                       <a>Members</a>
@@ -119,8 +119,8 @@ export default class MobileMenu extends Component {
                   <a>Authentication</a>
                 </li>
               </ul>
-              <p class="menu-label">Transactions</p>
-              <ul class="menu-list">
+              <p className="menu-label">Transactions</p>
+              <ul className="menu-list">
                 <li>
                   <a>Payments</a>
                 </li>
