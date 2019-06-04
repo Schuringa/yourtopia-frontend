@@ -130,6 +130,15 @@ export default class MobileMenu extends Component {
                 <li>
                   <a>Balance</a>
                 </li>
+                <li>
+                  <a>Payments</a>
+                </li>
+                <li>
+                  <a>Transfers</a>
+                </li>
+                <li>
+                  <a>Balance</a>
+                </li>
               </ul>
             </div>
           </aside>
