@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import variables from '../../../variables.scss'
+import variables from '../../../_variables.scss'
 import data from './data.json'
 
 export default class Categories extends Component {
@@ -25,7 +25,6 @@ export default class Categories extends Component {
   }
 
   render () {
-    console.log(variables)
     const { displayCategories } = this.state
     return (
       <React.Fragment>
