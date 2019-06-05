@@ -6,7 +6,7 @@ import FilterMobile from '../components/filters/filters-mobile'
 export default ({ children }) => (
   <React.Fragment>
     <div className="columns">
-      <div className="column is-hidden-mobile  is-narrow">
+      <div className="column is-narrow">
         <Filter />
       </div>
       <div className="column">
@@ -22,7 +22,7 @@ export default ({ children }) => (
             <div className="level-item is-hidden-mobile">
               <h1 className="is-size-5">Clothing</h1>
             </div>
-            <div className="level-item is-hidden-tablet">
+            <div className="level-item">
               <FilterMobile />
             </div>
           </div>

@@ -26,15 +26,13 @@ export default class FilterMobile extends Component {
   render () {
     const { displayFilters } = this.state
     return (
-      <React.Fragment>
-        <div>
-          <button onClick={this.showFilters} className="button is-small">
-            <span>Filters</span>
-            <span className="icon">
-              <TuneIcon size="1em" />
-            </span>
-          </button>
-        </div>
+      <div className="is-hidden-tablet">
+        <button onClick={this.showFilters} className="button is-small">
+          <span>Filters</span>
+          <span className="icon">
+            <TuneIcon size="1em" />
+          </span>
+        </button>
         <div
           className="menu is-size-7 mobile-filters"
           style={{
@@ -95,7 +93,7 @@ export default class FilterMobile extends Component {
             </ul>
           </aside>
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

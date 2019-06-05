@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Filter extends Component {
   render () {
     return (
-      <aside className="menu " style={{ width: '200px' }}>
+      <aside className="menu is-hidden-mobile" style={{ width: '200px' }}>
         <p className="menu-label is-size-6">Filters</p>
         <p className="menu-label is-size-7">Collection</p>
         <ul className="menu-list is-size-7">
