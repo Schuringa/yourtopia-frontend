@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import variables from '../../../_variables.scss'
+import variables from '../../../variables.scss'
 import data from './data.json'
 
 export default class Categories extends Component {

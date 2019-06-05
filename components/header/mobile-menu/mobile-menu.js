@@ -4,7 +4,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks
 } from 'body-scroll-lock'
-import variables from '../../../_variables.scss'
+import variables from '../../../variables.scss'
 
 export default class MobileMenu extends Component {
   constructor (props) {
