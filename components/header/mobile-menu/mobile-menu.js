@@ -4,7 +4,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks
 } from 'body-scroll-lock'
-import variables from '../../../variables.scss'
+import variables from '../../../variables.json'
 
 export default class MobileMenu extends Component {
   constructor (props) {
@@ -151,7 +151,7 @@ export default class MobileMenu extends Component {
             overflow-x: hidden;
             left: 0;
             bottom: 0;
-            top: ${variables.navbarheighttouch};
+            top: ${variables.navbarHeightTouch};
             background: white;
             transition: width 0.3s ease-in-out;
           }

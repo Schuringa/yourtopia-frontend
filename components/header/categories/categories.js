@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import variables from '../../../variables.scss'
+import variables from '../../../variables.json'
 import data from './data.json'
 
 export default class Categories extends Component {
@@ -93,7 +93,7 @@ export default class Categories extends Component {
               position: absolute;
               overflow: hidden;
               left: 0;
-              top: ${variables.navbarheight};
+              top: ${variables.navbarHeight};
               width: 100%;
               background: white;
               transition: height 0.4s ease-in-out;
