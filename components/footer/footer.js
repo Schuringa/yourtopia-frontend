@@ -22,6 +22,15 @@ export default class Footer extends Component {
             </Link>
           </span>
         </div>
+        <style jsx>{`
+          .footer {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+          }
+
+          .footer-item {
+            padding: 0 1em;
+          }
+        `}</style>
       </footer>
     )
   }

@@ -40,6 +40,12 @@ export default class Header extends Component {
           <Search />
           <Categories />
         </div>
+        <style jsx>{`
+          .header {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+            z-index: 4;
+          }
+        `}</style>
       </nav>
     )
   }

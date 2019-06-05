@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import variables from '../../../variables.scss'
 import data from './data.json'
 
 export default class Categories extends Component {
@@ -24,6 +25,7 @@ export default class Categories extends Component {
   }
 
   render () {
+    console.log(variables)
     const { displayCategories } = this.state
     return (
       <React.Fragment>
@@ -81,6 +83,30 @@ export default class Categories extends Component {
             </div>
           </div>
         </div>
+        <style jsx>
+          {`
+            .category-tab {
+              padding: 0.75rem;
+              height: 100%;
+            }
+
+            .categories {
+              position: absolute;
+              overflow: hidden;
+              left: 0;
+              top: ${variables.navbarheight};
+              width: 100%;
+              background: white;
+              transition: height 0.4s ease-in-out;
+              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+              z-index: 3;
+            }
+
+            .category-list {
+              margin: 2em 1em 1em 1em;
+            }
+          `}
+        </style>
       </React.Fragment>
     )
   }

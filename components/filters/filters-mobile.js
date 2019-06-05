@@ -40,7 +40,7 @@ export default class FilterMobile extends Component {
             height: `${displayFilters ? '100vh' : '0'}`
           }}
         >
-          <aside className="filter-menu-content">
+          <aside>
             <p className="menu-label">General</p>
             <ul className="menu-list">
               <li>
@@ -93,6 +93,23 @@ export default class FilterMobile extends Component {
             </ul>
           </aside>
         </div>
+        <style jsx>{`
+          .mobile-filters {
+            position: fixed;
+            overflow: hidden;
+            left: 0;
+            width: 0;
+            height: 0;
+            top: 0;
+            bottom: 0;
+            background: white;
+            transition: width 0.4s ease-in-out;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+            z-index: 3;
+            white-space: nowrap;
+            display: inline-block;
+          }
+        `}</style>
       </div>
     )
   }

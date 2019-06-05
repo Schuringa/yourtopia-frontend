@@ -4,6 +4,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks
 } from 'body-scroll-lock'
+import variables from '../../../variables.scss'
 
 export default class MobileMenu extends Component {
   constructor (props) {
@@ -143,6 +144,32 @@ export default class MobileMenu extends Component {
             </div>
           </aside>
         </div>
+        <style jsx>{`
+          .mobile-menu {
+            position: fixed;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            left: 0;
+            bottom: 0;
+            top: ${variables.navbarheighttouch};
+            background: white;
+            transition: width 0.3s ease-in-out;
+          }
+
+          .mobile-menu-content {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+          }
+
+          .menu-button {
+            width: 4rem;
+          }
+
+          .navbar-burger:hover {
+            background-color: transparent;
+          }
+        `}</style>
       </span>
     )
   }
