@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-
 export default class Filter extends Component {
   render () {
     return (
-      <aside className="menu is-hidden-mobile" style={{ width: '200px' }}>
+      <aside className="menu is-hidden-mobile filters">
         <p className="menu-label is-size-6">Filters</p>
         <p className="menu-label is-size-7">Collection</p>
         <ul className="menu-list is-size-7">
@@ -57,6 +56,11 @@ export default class Filter extends Component {
             <a>Fleece</a>
           </li>
         </ul>
+        <style jsx>{`
+          .filters {
+            width: 200px;
+          }
+        `}</style>
       </aside>
     )
   }

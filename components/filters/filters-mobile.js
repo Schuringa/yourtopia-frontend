@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import TuneIcon from 'mdi-react/TuneIcon'
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from 'body-scroll-lock'
 
 export default class FilterMobile extends Component {
   constructor (props) {
@@ -11,13 +16,32 @@ export default class FilterMobile extends Component {
     this.hideFilters = this.hideFilters.bind(this)
   }
 
+  componentDidMount () {
+    this.targetElement = document.querySelector('#filter-menu')
+    document.addEventListener('mousedown', this.handleClickOutside)
+  }
+
+  componentWillUnmount () {
+    document.removeEventListener('mousedown', this.handleClickOutside)
+    clearAllBodyScrollLocks()
+  }
+
+  /**
+   * Set the wrapper ref
+   */
+  setWrapperRef (node) {
+    this.wrapperRef = node
+  }
+
   showFilters () {
+    disableBodyScroll(this.targetElement)
     this.setState({
       displayFilters: true
     })
   }
 
   hideFilters () {
+    enableBodyScroll(this.targetElement)
     this.setState({
       displayFilters: false
     })
@@ -34,13 +58,24 @@ export default class FilterMobile extends Component {
           </span>
         </button>
         <div
-          className="menu is-size-7 mobile-filters"
+          id="filter-menu"
+          className="mobile-filters"
           style={{
-            width: `${displayFilters ? '300px' : '0'}`,
-            height: `${displayFilters ? '100vh' : '0'}`
+            width: `${displayFilters ? '100%' : '0'}`
           }}
         >
-          <aside>
+          <aside className="menu is-size-7  mobile-filters-content">
+            <span
+              role="button"
+              className={`navbar-burger menu-button is-active`}
+              aria-label="menu"
+              aria-expanded="false"
+              onClick={this.hideFilters}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </span>
             <p className="menu-label">General</p>
             <ul className="menu-list">
               <li>
@@ -96,18 +131,22 @@ export default class FilterMobile extends Component {
         <style jsx>{`
           .mobile-filters {
             position: fixed;
-            overflow: hidden;
+            overflow-y: scroll;
+            overflow-x: hidden;
             left: 0;
             width: 0;
-            height: 0;
             top: 0;
             bottom: 0;
             background: white;
-            transition: width 0.4s ease-in-out;
+            transition: width 0.3s ease-in-out;
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
-            z-index: 3;
+            z-index: 4;
+          }
+          .mobile-filters-content {
             white-space: nowrap;
             display: inline-block;
+            width: 100%;
+            padding: 0 1em;
           }
         `}</style>
       </div>

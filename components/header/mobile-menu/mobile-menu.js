@@ -81,7 +81,7 @@ export default class MobileMenu extends Component {
           className="mobile-menu has-background-white-ter is-hidden-tablet"
         >
           <aside className="menu mobile-menu-content">
-            <div style={{ padding: '1em' }}>
+            <div>
               <p className="menu-label">General</p>
               <ul className="menu-list">
                 <li>
@@ -160,6 +160,7 @@ export default class MobileMenu extends Component {
             overflow: hidden;
             white-space: nowrap;
             display: inline-block;
+            padding: 1em;
           }
 
           .menu-button {
