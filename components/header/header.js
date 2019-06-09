@@ -16,19 +16,12 @@ export default class Header extends Component {
           <Link prefetch href="/">
             <div className="navbar-item has-cursor-pointer">
               <img
-                className="image is-48x48"
-                src="/static/logo.png"
+                className="image"
+                src="/static/logo_new.png"
                 alt="Price Help"
-                height="48"
-                width="48"
+                height="125"
+                width="125"
               />
-
-              <span
-                style={{ padding: '0.5em' }}
-                className="title has-text-weight-bold is-6 has-text-grey-dark"
-              >
-                Price Help
-              </span>
             </div>
           </Link>
         </div>
