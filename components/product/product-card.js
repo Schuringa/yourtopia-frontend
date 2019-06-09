@@ -4,7 +4,7 @@ import OpenInNewIcon from 'mdi-react/OpenInNewIcon'
 export default class ProductCard extends Component {
   render () {
     return (
-      <div className="column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd">
+      <div className="product column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd">
         <div className="card">
           <div className="card-image">
             <figure className="image is-4by3" />
@@ -23,6 +23,13 @@ export default class ProductCard extends Component {
             </div>
           </div>
         </div>
+        <style jsx>
+          {`
+            .product {
+              padding: 0.25em 0.25em !important;
+            }
+          `}
+        </style>
       </div>
     )
   }
