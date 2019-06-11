@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
           </div>
           <div className="columns banner">
             <div className="column has-text-centered">
-              <div className="icon">
+              <div className="icon has-text-black">
                 <CartOutlineIcon size="2.5em" />
               </div>
               <div>
@@ -47,7 +47,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
             <div className="column has-text-centered">
-              <div className="icon">
+              <div className="icon has-text-black">
                 <TagOutlineIcon size="2.5em" />
               </div>
               <div>
@@ -56,7 +56,7 @@ class IndexPage extends React.Component {
               </div>
             </div>
             <div className="column has-text-centered">
-              <div className="icon">
+              <div className="icon has-text-black">
                 <ShieldOutlineIcon size="2.5em" />
               </div>
               <div>
@@ -89,6 +89,7 @@ class IndexPage extends React.Component {
 
             .banner-image {
               object-fit: cover;
+              object-position: 0% 70%;
               height: 35vh;
               width: 100%;
             }
