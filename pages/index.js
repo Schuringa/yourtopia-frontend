@@ -1,6 +1,10 @@
 // pages/index.js
 import React from 'react'
 import Default from '../layouts/default'
+import CartOutlineIcon from 'mdi-react/CartOutlineIcon'
+import TagOutlineIcon from 'mdi-react/TagOutlineIcon'
+import ShieldOutlineIcon from 'mdi-react/ShieldOutlineIcon'
+import MedalIcon from 'mdi-react/MedalIcon'
 import '../styles.scss'
 const meta = { title: 'Price Help Staging', description: 'Staging site' }
 
@@ -15,7 +19,7 @@ class IndexPage extends React.Component {
                 Sustainable shopping starts at Price
                 <span className="has-text-success">Help</span>
               </h1>
-              <h2 className="subtitle">
+              <h2 className="subtitle is-family-secondary">
                 Search and discover millions of products, used and new, local
                 and international from the whole internet
               </h2>
@@ -23,35 +27,54 @@ class IndexPage extends React.Component {
           </div>
         </section>
         <section className="hero card">
-          <img
-            className="banner-image"
-            src="/static/forest_banner.jpg"
-            alt="Forest banner"
-          />
+          <div className="image-container">
+            <img
+              className="banner-image"
+              src="/static/forest_banner.jpg"
+              alt="Forest banner"
+            />
+            <div className="image-text is-size-3 is-family-secondary">
+              Our journey to save the planet
+            </div>
+          </div>
           <div className="columns banner">
             <div className="column has-text-centered">
+              <div className="icon">
+                <CartOutlineIcon size="2em" />
+              </div>
               <div>
-                <p className="heading">You can buy everything</p>
+                <p className="heading has-text-black">You can buy everything</p>
                 <p className="is-size-7">12 million goods from UK merchants</p>
               </div>
             </div>
             <div className="column has-text-centered">
+              <div className="icon">
+                <TagOutlineIcon size="2em" />
+              </div>
               <div>
-                <p className="heading">Best prices</p>
+                <p className="heading has-text-black">Best prices</p>
                 <p className="is-size-7">Find the cheapest</p>
               </div>
             </div>
             <div className="column has-text-centered">
+              <div className="icon">
+                <ShieldOutlineIcon size="2em" />
+              </div>
               <div>
-                <p className="heading">Protect the environment</p>
+                <p className="heading has-text-black">
+                  Protect the environment
+                </p>
                 <p className="is-size-7">
                   Product that last long & have sustainable production
                 </p>
               </div>
             </div>
             <div className="column has-text-centered">
+              <div className="icon has-text-success">
+                <MedalIcon size="2em" />
+              </div>
               <div>
-                <p className="heading">Reliable merchants</p>
+                <p className="heading has-text-black">Reliable merchants</p>
                 <p className="is-size-7">
                   Passed the PriceHelp sustainability test
                 </p>
@@ -67,8 +90,21 @@ class IndexPage extends React.Component {
 
             .banner-image {
               object-fit: cover;
-              height: 35vh;
+              height: 40vh;
               width: 100%;
+            }
+
+            .image-container {
+              position: relative;
+              text-align: center;
+            }
+
+            .image-text {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: white;
             }
           `}
         </style>
