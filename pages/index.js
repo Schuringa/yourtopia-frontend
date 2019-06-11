@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
         <section className="hero has-text-centered">
           <div className="hero-body banner">
             <div className="container">
-              <h1 className="title has-text-weight-normal">
+              <h1 className="title has-text-weight-normal has-text-black">
                 Sustainable shopping starts at Price
                 <span className="has-text-success">Help</span>
               </h1>
@@ -30,7 +30,7 @@ class IndexPage extends React.Component {
           <div className="image-container">
             <img
               className="banner-image"
-              src="/static/forest_banner.jpg"
+              src="/static/forest_banner_compressed.jpg"
               alt="Forest banner"
             />
             <div className="image-text is-size-3 is-family-secondary">
@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
           <div className="columns banner">
             <div className="column has-text-centered">
               <div className="icon">
-                <CartOutlineIcon size="2em" />
+                <CartOutlineIcon size="2.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">You can buy everything</p>
@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="column has-text-centered">
               <div className="icon">
-                <TagOutlineIcon size="2em" />
+                <TagOutlineIcon size="2.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">Best prices</p>
@@ -58,7 +58,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="column has-text-centered">
               <div className="icon">
-                <ShieldOutlineIcon size="2em" />
+                <ShieldOutlineIcon size="2.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">
@@ -71,7 +71,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="column has-text-centered">
               <div className="icon has-text-success">
-                <MedalIcon size="2em" />
+                <MedalIcon size="2.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">Reliable merchants</p>

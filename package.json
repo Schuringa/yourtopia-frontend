@@ -16,7 +16,6 @@
     "bulma": "^0.7.5",
     "mdi-react": "^5.4.0",
     "next": "^8.1.0",
-    "next-optimized-images": "^2.5.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
