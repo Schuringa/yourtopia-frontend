@@ -90,7 +90,7 @@ class IndexPage extends React.Component {
 
             .banner-image {
               object-fit: cover;
-              height: 40vh;
+              height: 35vh;
               width: 100%;
             }
 
