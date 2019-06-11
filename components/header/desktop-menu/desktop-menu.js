@@ -3,7 +3,7 @@ import variables from '../../../variables.json'
 import Link from 'next/link'
 import data from './data.json'
 
-export default class Categories extends Component {
+export default class DesktopMenu extends Component {
   constructor (props) {
     super(props)
     this.state = {

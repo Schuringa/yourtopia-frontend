@@ -31,7 +31,6 @@ class IndexPage extends React.Component {
             <img
               className="banner-image"
               src="/static/forest_banner_compressed.jpg"
-              alt="Forest banner"
             />
             <div className="image-text is-size-3 is-family-secondary">
               Our journey to save the planet
@@ -65,7 +64,7 @@ class IndexPage extends React.Component {
                   Protect the environment
                 </p>
                 <p className="is-size-7">
-                  Product that last long & have sustainable production
+                  Products that last long & have sustainable production
                 </p>
               </div>
             </div>
