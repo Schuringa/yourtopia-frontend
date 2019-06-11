@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import variables from '../../../variables.json'
+import Link from 'next/link'
 import data from './data.json'
 
 export default class Categories extends Component {
@@ -41,9 +42,11 @@ export default class Categories extends Component {
                     displayCategories ? 'is-active' : ''
                   }`}
                 >
-                  <a onMouseEnter={this.showCategories} className="is-size-7">
-                    Categories
-                  </a>
+                  <Link href="/products">
+                    <a onMouseEnter={this.showCategories} className="is-size-7">
+                      Categories
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>

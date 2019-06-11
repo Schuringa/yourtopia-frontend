@@ -3,8 +3,12 @@ import ProductCard from '../components/product/product-card'
 import Breadcrumb from '../components/breadcrumb/breadcrumb'
 import Filter from '../components/filters/filters'
 import FilterMobile from '../components/filters/filters-mobile'
-export default ({ children }) => (
-  <React.Fragment>
+import Default from '../layouts/default'
+import '../styles.scss'
+const meta = { title: 'Product page', description: 'Product page' }
+
+export default () => (
+  <Default meta={meta}>
     <div className="columns">
       <div className="column is-narrow">
         <Filter />
@@ -51,6 +55,5 @@ export default ({ children }) => (
         </div>
       </div>
     </div>
-    {children}
-  </React.Fragment>
+  </Default>
 )
