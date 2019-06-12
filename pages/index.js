@@ -38,8 +38,8 @@ class IndexPage extends React.Component {
           </div>
           <div className="columns banner">
             <div className="column has-text-centered">
-              <div className="icon has-text-black">
-                <CartOutlineIcon size="2.5em" />
+              <div className="icon is-medium has-text-black">
+                <CartOutlineIcon size="1.75em" />
               </div>
               <div>
                 <p className="heading has-text-black">You can buy everything</p>
@@ -47,8 +47,8 @@ class IndexPage extends React.Component {
               </div>
             </div>
             <div className="column has-text-centered">
-              <div className="icon has-text-black">
-                <TagOutlineIcon size="2.5em" />
+              <div className="icon is-medium has-text-black">
+                <TagOutlineIcon size="1.75em" />
               </div>
               <div>
                 <p className="heading has-text-black">Best prices</p>
@@ -56,8 +56,8 @@ class IndexPage extends React.Component {
               </div>
             </div>
             <div className="column has-text-centered">
-              <div className="icon has-text-black">
-                <ShieldOutlineIcon size="2.5em" />
+              <div className="icon is-medium has-text-black">
+                <ShieldOutlineIcon size="1.75em" />
               </div>
               <div>
                 <p className="heading has-text-black">
@@ -69,8 +69,8 @@ class IndexPage extends React.Component {
               </div>
             </div>
             <div className="column has-text-centered">
-              <div className="icon has-text-success">
-                <MedalIcon size="2.5em" />
+              <div className="icon is-medium has-text-success">
+                <MedalIcon size="1.75em" />
               </div>
               <div>
                 <p className="heading has-text-black">Reliable merchants</p>
