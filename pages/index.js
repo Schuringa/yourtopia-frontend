@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
               Our journey to save the planet
             </div>
           </div>
-          <div className="columns banner">
+          <div className="columns icons-banner">
             <div className="column has-text-centered">
               <div className="icon is-medium has-text-black">
                 <CartOutlineIcon size="1.5em" />
@@ -84,7 +84,11 @@ class IndexPage extends React.Component {
         <style jsx>
           {`
             .banner {
-              padding: 0 0 3em 0;
+              padding: 0 0 2em 0;
+            }
+
+            .icons-banner {
+              padding: 1em;
             }
 
             .banner-image {
