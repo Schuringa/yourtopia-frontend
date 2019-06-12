@@ -39,7 +39,7 @@ class IndexPage extends React.Component {
           <div className="columns banner">
             <div className="column has-text-centered">
               <div className="icon is-medium has-text-black">
-                <CartOutlineIcon size="1.75em" />
+                <CartOutlineIcon size="1.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">You can buy everything</p>
@@ -48,7 +48,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="column has-text-centered">
               <div className="icon is-medium has-text-black">
-                <TagOutlineIcon size="1.75em" />
+                <TagOutlineIcon size="1.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">Best prices</p>
@@ -57,7 +57,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="column has-text-centered">
               <div className="icon is-medium has-text-black">
-                <ShieldOutlineIcon size="1.75em" />
+                <ShieldOutlineIcon size="1.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">
@@ -70,7 +70,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="column has-text-centered">
               <div className="icon is-medium has-text-success">
-                <MedalIcon size="1.75em" />
+                <MedalIcon size="1.5em" />
               </div>
               <div>
                 <p className="heading has-text-black">Reliable merchants</p>
@@ -84,7 +84,7 @@ class IndexPage extends React.Component {
         <style jsx>
           {`
             .banner {
-              padding: 1em;
+              padding: 0 0 3em 0;
             }
 
             .banner-image {
