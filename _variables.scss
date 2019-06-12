@@ -40,7 +40,3 @@ $app-padding: 2em;
 $app-height: calc(
   100vh - (#{$navbar-height} + #{$app-padding} + #{$footer-height})
 );
-
-$app-height-touch: calc(
-  100vh - (#{$navbar-height-touch} + #{$app-padding} + #{$footer-height})
-);

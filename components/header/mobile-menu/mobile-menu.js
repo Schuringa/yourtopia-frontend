@@ -78,7 +78,7 @@ export default class MobileMenu extends Component {
         <div
           id="mobile-menu"
           style={{ width: `${displayMenu ? '100%' : '0'}` }}
-          className="mobile-menu has-background-white-ter is-hidden-tablet"
+          className="mobile-menu has-background-white-ter is-hidden-tablet is-paddingless"
         >
           <aside className="menu mobile-menu-content">
             <div>
@@ -151,7 +151,7 @@ export default class MobileMenu extends Component {
             overflow-x: hidden;
             left: 0;
             bottom: 0;
-            top: ${variables.navbarHeightTouch};
+            top: ${variables.navbarHeight};
             background: white;
             transition: width 0.3s ease-in-out;
           }
@@ -164,7 +164,7 @@ export default class MobileMenu extends Component {
           }
 
           .menu-button {
-            width: 4rem;
+            width: 2rem;
           }
 
           .navbar-burger:hover {

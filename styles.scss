@@ -20,9 +20,7 @@ code {
   margin-top: $navbar-height;
   padding: 2em;
   @media screen and (max-width: $tablet) {
-    min-height: $app-height-touch;
-    margin-top: $navbar-height-touch;
-    padding: 0.85em;
+    padding: 2em 0.85em 2em 0.85em;
   }
 }
 

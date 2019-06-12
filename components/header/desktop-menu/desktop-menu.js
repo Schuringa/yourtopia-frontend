@@ -28,9 +28,9 @@ export default class DesktopMenu extends Component {
   render () {
     const { displayCategories } = this.state
     return (
-      <React.Fragment>
+      <div className="columns">
         <div className={`${displayCategories ? 'overlay-open' : 'overlay'}`} />
-        <div className="column is-paddingless">
+        <div className="column">
           <div
             onMouseLeave={this.hideCategories}
             className="navbar-menu category-tab"
@@ -109,7 +109,7 @@ export default class DesktopMenu extends Component {
             }
           `}
         </style>
-      </React.Fragment>
+      </div>
     )
   }
 }

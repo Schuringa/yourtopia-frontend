@@ -12,31 +12,45 @@ export default class Header extends Component {
         role="navigation"
         aria-label="main navigation"
       >
-        <div className="navbar-brand">
+        <div style={{ flexGrow: 0.7 }} className="navbar-brand">
           <Link prefetch href="/">
-            <div className="navbar-item has-cursor-pointer">
+            <div className="navbar-item header-item has-cursor-pointer">
               <img
-                className="image"
+                className="image is-hidden-mobile"
                 src="/static/logo_new.png"
                 alt="Price Help"
                 height="125"
                 width="125"
               />
+              <img
+                className="image is-hidden-tablet"
+                src="/static/logo_icon_new.png"
+                alt="Price Help"
+                height="32"
+                width="32"
+              />
             </div>
           </Link>
+          <div
+            style={{ flexGrow: 1 }}
+            className="navbar-item header-item has-cursor-pointer is-paddingless"
+          >
+            <Search />
+          </div>
+          <div className="navbar-item header-item has-cursor-pointer">
+            <MobileMenu />
+          </div>
         </div>
-        <div
-          style={{ flexGrow: 1 }}
-          className="columns is-mobile is-marginless"
-        >
-          <MobileMenu />
-          <Search />
-          <DesktopMenu />
-        </div>
+        <DesktopMenu />
         <style jsx>{`
           .header {
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
             z-index: 4;
+          }
+
+          .header-item {
+            padding-top: 0;
+            padding-bottom: 0;
           }
         `}</style>
       </nav>
