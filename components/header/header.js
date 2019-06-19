@@ -17,14 +17,14 @@ export default class Header extends Component {
             <div className="navbar-item header-item has-cursor-pointer">
               <img
                 className="image is-hidden-mobile"
-                src="/static/logo_new.png"
+                src="/static/pricehelp_logo.png"
                 alt="Price Help"
                 height="125"
                 width="125"
               />
               <img
                 className="image is-hidden-tablet"
-                src="/static/logo_icon_new.png"
+                src="/static/pricehelp_logo_icon.png"
                 alt="Price Help"
                 height="32"
                 width="32"
