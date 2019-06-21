@@ -26,8 +26,8 @@ export default class Header extends Component {
                 className="image is-hidden-tablet"
                 src="/static/pricehelp_logo_icon.png"
                 alt="Price Help"
-                height="32"
-                width="32"
+                height="28"
+                width="28"
               />
             </div>
           </Link>

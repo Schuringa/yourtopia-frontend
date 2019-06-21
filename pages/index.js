@@ -1,6 +1,7 @@
 // pages/index.js
 import React from 'react'
 import Default from '../layouts/default'
+import Categories from '../components/categories/categories'
 import CartOutlineIcon from 'mdi-react/CartOutlineIcon'
 import TagOutlineIcon from 'mdi-react/TagOutlineIcon'
 import ShieldOutlineIcon from 'mdi-react/ShieldOutlineIcon'
@@ -8,7 +9,7 @@ import MedalIcon from 'mdi-react/MedalIcon'
 import '../styles.scss'
 const meta = { title: 'Price Help Staging', description: 'Staging site' }
 
-class IndexPage extends React.Component {
+export default class IndexPage extends React.Component {
   render () {
     return (
       <Default meta={meta}>
@@ -81,6 +82,10 @@ class IndexPage extends React.Component {
             </div>
           </div>
         </section>
+        <section>
+          <Categories />
+        </section>
+
         <style jsx>
           {`
             .banner {
@@ -116,5 +121,3 @@ class IndexPage extends React.Component {
     )
   }
 }
-
-export default IndexPage
