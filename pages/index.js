@@ -1,7 +1,7 @@
 // pages/index.js
 import React from 'react'
 import Default from '../layouts/default'
-import Categories from '../components/categories/categories'
+import PopularCategories from '../components/categories/popular-categories'
 import CartOutlineIcon from 'mdi-react/CartOutlineIcon'
 import TagOutlineIcon from 'mdi-react/TagOutlineIcon'
 import ShieldOutlineIcon from 'mdi-react/ShieldOutlineIcon'
@@ -82,8 +82,8 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <section>
-          <Categories />
+        <section className="hero">
+          <PopularCategories />
         </section>
 
         <style jsx>
