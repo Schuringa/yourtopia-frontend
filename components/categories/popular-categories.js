@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import categories from './categories.json'
+import categories from './categories_edited.json'
 
 export default class PopularCategories extends Component {
   render () {
     return (
-      <div className="card category-container ">
+      <div className="card category-container">
         <span className="heading is-size-6"> Popular Categories</span>
         <div className="columns is-multiline is-marginless">
           {Object.keys(categories.Home).map(function (key, index) {
@@ -27,9 +27,7 @@ export default class PopularCategories extends Component {
               padding: 1em;
             }
             .category-item {
-               {
-                /* height: 100px; */
-              }
+              padding-bottom: 1em;
             }
           `}
         </style>

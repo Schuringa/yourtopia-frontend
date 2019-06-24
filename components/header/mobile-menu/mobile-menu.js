@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CategoriesMobile from '../../categories/categories-mobile'
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -26,6 +27,7 @@ export default class MobileMenu extends Component {
   componentWillUnmount () {
     document.removeEventListener('mousedown', this.handleClickOutside)
     clearAllBodyScrollLocks()
+    this.hideMenu()
   }
 
   /**
@@ -80,68 +82,8 @@ export default class MobileMenu extends Component {
           style={{ width: `${displayMenu ? '100%' : '0'}` }}
           className="mobile-menu has-background-white-ter is-hidden-tablet is-paddingless"
         >
-          <aside className="menu mobile-menu-content">
-            <div>
-              <p className="menu-label">General</p>
-              <ul className="menu-list">
-                <li>
-                  <a>Dashboard</a>
-                </li>
-                <li>
-                  <a>Customers</a>
-                </li>
-              </ul>
-              <p className="menu-label">Administration</p>
-              <ul className="menu-list">
-                <li>
-                  <a>Team Settings</a>
-                </li>
-                <li>
-                  <a className="is-active">Manage Your Team</a>
-                  <ul>
-                    <li>
-                      <a>Members</a>
-                    </li>
-                    <li>
-                      <a>Plugins</a>
-                    </li>
-                    <li>
-                      <a>Add a member</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a>Invitations</a>
-                </li>
-                <li>
-                  <a>Cloud Storage Environment Settings</a>
-                </li>
-                <li>
-                  <a>Authentication</a>
-                </li>
-              </ul>
-              <p className="menu-label">Transactions</p>
-              <ul className="menu-list">
-                <li>
-                  <a>Payments</a>
-                </li>
-                <li>
-                  <a>Transfers</a>
-                </li>
-                <li>
-                  <a>Balance</a>
-                </li>
-                <li>
-                  <a>Payments</a>
-                </li>
-                <li>
-                  <a>Transfers</a>
-                </li>
-                <li>
-                  <a>Balance</a>
-                </li>
-              </ul>
-            </div>
+          <aside className="mobile-menu-content">
+            <CategoriesMobile onClick={this.hideMenu} />
           </aside>
         </div>
         <style jsx>{`

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import variables from '../../../variables.json'
-import Link from 'next/link'
-import data from './data.json'
+import CategoriesDesktop from '../../categories/categories-desktop'
 
 export default class DesktopMenu extends Component {
   constructor (props) {
@@ -42,45 +41,19 @@ export default class DesktopMenu extends Component {
                     displayCategories ? 'is-active' : ''
                   }`}
                 >
-                  <Link href="/products">
-                    <a onMouseEnter={this.showCategories} className="is-size-7">
-                      Categories
-                    </a>
-                  </Link>
+                  <a onMouseEnter={this.showCategories} className="is-size-7">
+                    Categories
+                  </a>
                 </li>
               </ul>
             </div>
             <div
-              style={{ height: `${displayCategories ? '250px' : '0'}` }}
+              style={{ maxHeight: `${displayCategories ? '500px' : '0'}` }}
               onMouseEnter={this.showCategories}
               className="categories"
             >
               <div className="columns is-multiline">
-                {data.topnavi.navigation_node.children[2].children.map(
-                  (value, index) => {
-                    return (
-                      <div key={index} className="column category-list">
-                        <p>
-                          <a
-                            href={value.url_key}
-                            className="has-text-weight-bold is-size-7"
-                          >
-                            {value.name}
-                          </a>
-                        </p>
-                        {value.children.map((value, index) => {
-                          return (
-                            <p key={index}>
-                              <a href={value.url_key} className="is-size-7">
-                                {value.name}
-                              </a>
-                            </p>
-                          )
-                        })}
-                      </div>
-                    )
-                  }
-                )}
+                <CategoriesDesktop onClick={this.hideCategories} />
               </div>
             </div>
           </div>
@@ -99,7 +72,7 @@ export default class DesktopMenu extends Component {
               top: ${variables.navbarHeight};
               width: 100%;
               background: white;
-              transition: height 0.4s ease-in-out;
+              transition: max-height 0.4s ease-in-out;
               box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
               z-index: 3;
             }
