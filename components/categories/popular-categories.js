@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
+import CategoryLink from './category-link'
 import categories from './categories_edited.json'
 
 export default class PopularCategories extends Component {
@@ -12,17 +12,11 @@ export default class PopularCategories extends Component {
             return (
               <div key={index} className="column is-paddingless is-2 is-size-7">
                 <div className="category-item">
-                  <Link key={index} href={`/products?category=${key}`}>
-                    <div className="has-text-weight-semibold">
-                      <a className="is-size-7 has-text-dark">{key}</a>
-                    </div>
-                  </Link>
+                  <CategoryLink value={key} />
                   {Object.keys(categories.Home[key]).map(function (key, index) {
                     return (
                       <div>
-                        <Link key={index} href={`/products?category=${key}`}>
-                          <a className="is-size-7 has-text-dark">{key}</a>
-                        </Link>
+                        <CategoryLink value={key} />
                       </div>
                     )
                   })}

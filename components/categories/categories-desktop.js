@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
+import CategoryLink from './category-link'
 import categories from './categories_edited.json'
 
 export default class CategoriesDesktop extends Component {
@@ -10,14 +10,7 @@ export default class CategoriesDesktop extends Component {
           {Object.keys(categories.Home).map(function (key, index) {
             return (
               <div key={index} className="column is-3">
-                <Link href={`/products?category=${key}`}>
-                  <a
-                    onClick={() => this.props.onClick}
-                    className="category-item is-size-7 has-text-dark"
-                  >
-                    {key}
-                  </a>
-                </Link>
+                <CategoryLink value={key} />
               </div>
             )
           })}

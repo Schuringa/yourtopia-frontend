@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Link from 'next/link'
+import CategoryLink from './category-link'
 import categories from './categories_edited.json'
 
 export default class CategoriesMobile extends Component {
@@ -8,14 +8,9 @@ export default class CategoriesMobile extends Component {
       <div>
         {Object.keys(categories.Home).map(function (key, index) {
           return (
-            <Link key={index} href={`/products?category=${key}`}>
-              <a
-                onClick={() => this.props.onClick}
-                className="is-size-7 has-text-dark"
-              >
-                {key}
-              </a>
-            </Link>
+            <div key={index}>
+              <CategoryLink value={key} />
+            </div>
           )
         })}
       </div>
