@@ -9,7 +9,7 @@ export default class CategoriesDesktop extends Component {
         <div className="columns is-multiline is-marginless">
           {Object.keys(categories.Home).map(function (key, index) {
             return (
-              <div className="column is-paddingless is-3">
+              <div key={index} className="column is-3">
                 <Link href={`/products?category=${key}`}>
                   <a
                     onClick={() => this.props.onClick}
@@ -21,20 +21,11 @@ export default class CategoriesDesktop extends Component {
               </div>
             )
           })}
-          <div className="column is-paddingless">
-            <a
-              onClick={() => this.props.onClick}
-              className="category-item is-size-7 has-text-dark"
-            >
-              All categories
-            </a>
-          </div>
         </div>
         <style jsx>
           {`
             .category-container {
-              padding: 1em;
-              width: 100%;
+              padding: 3em;
             }
             .category-item {
               padding: 0.5em;

@@ -8,16 +8,14 @@ export default class CategoriesMobile extends Component {
       <div>
         {Object.keys(categories.Home).map(function (key, index) {
           return (
-            <div>
-              <Link href={`/products?category=${key}`}>
-                <a
-                  onClick={() => this.props.onClick}
-                  className="is-size-7 has-text-dark"
-                >
-                  {key}
-                </a>
-              </Link>
-            </div>
+            <Link key={index} href={`/products?category=${key}`}>
+              <a
+                onClick={() => this.props.onClick}
+                className="is-size-7 has-text-dark"
+              >
+                {key}
+              </a>
+            </Link>
           )
         })}
       </div>
