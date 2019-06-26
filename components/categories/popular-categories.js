@@ -12,7 +12,7 @@ export default class PopularCategories extends Component {
             return (
               <div key={index} className="column is-paddingless is-2 is-size-7">
                 <div className="category-item">
-                  <CategoryLink value={key} />
+                  <CategoryLink isParent value={key} />
                   {Object.keys(categories.Home[key]).map(function (key, index) {
                     return (
                       <div>
