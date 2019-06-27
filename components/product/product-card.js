@@ -5,18 +5,38 @@ export default class ProductCard extends Component {
   render () {
     const { productData } = this.props
     return (
-      <div className="product column is-flex  is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd">
+      <div className="product column is-flex is-paddingless is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd">
         <div className="card">
           <div className="image-block has-text-centered is-vcentered">
-            <img className="product-image" src={productData.image} />
+            <img src={productData.image} />
           </div>
           <div className="card-content">
             <div className="media-content">
               <p className="is-size-7">{productData.name}</p>
-              <span className="subtitle is-size-7 has-text-danger">
-                ${productData.price}
-              </span>
-              <a href={productData.direct_url}>
+              {productData.price === productData.finalprice ? (
+                <span className="subtitle is-size-7">
+                  {(productData.price / 100).toLocaleString('en-GB', {
+                    style: 'currency',
+                    currency: productData.currency
+                  })}
+                </span>
+              ) : (
+                <div>
+                  <span className="subtitle is-size-7 has-text-danger">
+                    {(productData.finalprice / 100).toLocaleString('en-GB', {
+                      style: 'currency',
+                      currency: productData.currency
+                    })}{' '}
+                  </span>
+                  <span className="subtitle is-size-7 sale-price">
+                    {(productData.price / 100).toLocaleString('en-GB', {
+                      style: 'currency',
+                      currency: productData.currency
+                    })}
+                  </span>
+                </div>
+              )}
+              <a href={productData.direct_url} target="_blank">
                 <span className="subtitle is-size-7 has-text-grey-light">
                   - {productData.merchant}
                 </span>
@@ -35,12 +55,17 @@ export default class ProductCard extends Component {
           {`
             .product {
               padding: 0.25em 0.25em !important;
-              width: 250px;
+              width: 260px;
             }
             .image-block {
               height: 300px;
+              width: 250px;
+              padding-top: 2em;
               margin-left: auto;
               margin-right: auto;
+            }
+            .sale-price {
+              text-decoration: line-through;
             }
             img {
               max-width: 100%;
