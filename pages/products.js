@@ -6,11 +6,10 @@ import Filter from '../components/filters/filters'
 import FilterMobile from '../components/filters/filters-mobile'
 import Default from '../layouts/default'
 import '../styles.scss'
-const meta = { title: 'Product page', description: 'Product page' }
 
 export default class ProductsPage extends React.Component {
-  state = { products: [] }
   static async getInitialProps ({ query }) {
+    const meta = { title: query.category, description: query.category }
     try {
       const response = await axios.get(
         'https://cx3.pricehelp.com/api/v0.1/products',
@@ -26,19 +25,60 @@ export default class ProductsPage extends React.Component {
           }
         }
       )
-      console.log(response)
       return {
-        products: response.data
+        products: response.data,
+        category: query.category,
+        meta
       }
     } catch (err) {
-      console.log(err)
+      return {
+        error: err,
+        meta
+      }
     }
   }
+
+  state = {
+    products: this.props.products,
+    currentPage: 1,
+    limit: 20
+  }
+
+  async loadMoreProducts () {
+    this.state.currentPage++
+    try {
+      const response = await axios.get(
+        'https://cx3.pricehelp.com/api/v0.1/products',
+        {
+          params: {
+            match: {
+              category: { $regex: `${this.props.category}` }
+            },
+            skip: this.state.currentPage * this.state.limit,
+            limit: this.state.limit,
+            token:
+              'eyJhbGciOiJSU0EtT0FFUCIsImN0eSI6IkpXVCIsImVuYyI6IkExMjhHQ00iLCJ0eXAiOiJKV1QifQ.xjSimwpZHyHjEwhPrj4rYxkyHvplK1KWMyWuJOeEHz3C6p8Ee3b46CwFgPoy46T7LRXOf4PsKCYNBK_YzIiTic4o6YT3ykpupi_Auz6TAPIA70Yt0XTEkcav0313cHGDPnWcj3GOIzLptjAN70NskhjYoHZhP-3hBg017a24VlFTehaXuQPhB5xIqTU3UiX-fyhQjcDnI4C8R5NO_T7MX0dgIaSXgqU-wpQWpdwKnDkKRolZ3-3YMYb6BL-4DFxinbeMmd2U12rS7s8H0FXLHQwwq1muz58vSlxTCedVUhOfBr1sMQ4EgS3ipdkXB2cw5kle48PeQbQHJGM_n-QkWQ.Vs54Iok1evhDwc6_.PfxX_pCXznZ9T3HTTq6FwP8sliop36W-zXDFMG6Xo96dznOSSwaTHCJQz5ZlClvtrHpmGezi8MOOJmMJDClC-P35LYdwxsYHszXY0GbTZW505aKSLCGzqKBhLEM34I9HwXdQGSrifse8WFKdh7rP_9NUGzCCu-RyA6c8DEtNUXXnLcgibkRJrVqMpNju5ACElc6I-P5oPWeG7G7fGwNfwOdG1cVVrMWaQrELAdP9pAnIxK4Rd1N4Eb-tbPaGvr_zCoerGS-wsFrCWkpFgLAZ3OWv73RiQaZQjeviw15xGVfXXXFZGEuThP4aaMHYKKHnxjmM-0a-1RGfXCgcPskOZByKZGn8fom0qygqNHiRs3gFz45cU3eprB9k__f_fpF7__7-aCd3cGv_6tlfV5PwYaJ-66X3r8OTSdn0jdj1zHJf8w-0AOm9_EHQWkT1pOaqC37XaStDC4b7DZK11QiEIANIbVwZAI4_2p77tlcGMfdLikmLMD76S2N4BBPAK4vHSf_Ev6-Bf2YBDigBBBJf9x2yp1G22o2qM3H16rswTvcav-Ar4ZcblbD4mJGBM8Hb14qRjFxywS_hiRauxcxOtd1IHIxG7xwJdhwL98sBbiomNOzfwaHJl1CnZ-zo0c3_r2a8tzZEWwBoHT9dmSrvIJWaXnlupYS6XiRVMyIQPKueVctSKs_5yLiowniOPBKhimLrKezK4fcJGPGdjYSfUQKCHfNU7uFbaZ3cjlqNWWfjWRnKJDEcQvTKnHDUqCjXkPuYYebDD0mVMyUDbCe6COCUmYSGdEGXG9SoDkP3CuN15tmt7Do--lQTkOmAUIaE54IPhn7nteOG9LNNQAaeDozJI3gMO6UcjYxTpqkxbn6fd3taLrkrZfl-apjWI6QS.fq-EwgZntDizV1i8-x6L7w'
+          }
+        }
+      )
+      this.setState(prevState => {
+        return {
+          products: [...prevState.products, ...response.data],
+          currentPage: prevState.currentPage++
+        }
+      })
+    } catch (err) {
+      return {
+        error: err
+      }
+    }
+  }
+
   render () {
-    const { products } = this.props
-    console.log(products)
+    const { products } = this.state
+    console.log(this.state)
     return (
-      <Default meta={meta}>
+      <Default meta={this.props.meta}>
         <div className="columns">
           <div className="column is-narrow">
             <Filter />
@@ -72,13 +112,31 @@ export default class ProductsPage extends React.Component {
               </div>
             </div>
 
-            <div className="columns is-variable is-1-mobile is-multiline is-mobile">
+            <div className="columns is-centered is-variable is-1-mobile is-multiline is-mobile">
               {products.map((value, index) => {
-                return <ProductCard productData={value} />
+                return <ProductCard key={index} productData={value} />
               })}
+            </div>
+            <div className="columns">
+              <div className="column has-text-centered">
+                <button
+                  onClick={() => this.loadMoreProducts()}
+                  className="button is-inverted is-outlined"
+                >
+                  Load More
+                </button>
+              </div>
             </div>
           </div>
         </div>
+        <style jsx>
+          {`
+            button {
+              padding: 1.5em 2em 1.5em 2em;
+              border-radius: 0px;
+            }
+          `}
+        </style>
       </Default>
     )
   }
