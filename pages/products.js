@@ -81,7 +81,6 @@ export default class ProductsPage extends React.Component {
 
   render () {
     const { products, loading } = this.state
-    console.log(this.state)
     return (
       <Default meta={this.props.meta}>
         <div className="columns">
