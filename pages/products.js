@@ -9,7 +9,10 @@ import '../styles.scss'
 
 export default class ProductsPage extends React.Component {
   static async getInitialProps ({ query }) {
-    const meta = { title: query.category, description: query.category }
+    const meta = {
+      title: `PriceHelp ${query.category}`,
+      description: `PriceHelp ${query.category}`
+    }
     try {
       const response = await axios.get(
         'https://cx3.pricehelp.com/api/v0.1/products',
@@ -45,6 +48,7 @@ export default class ProductsPage extends React.Component {
   }
 
   async loadMoreProducts () {
+    this.setState({ loading: true })
     this.state.currentPage++
     try {
       const response = await axios.get(
@@ -64,7 +68,8 @@ export default class ProductsPage extends React.Component {
       this.setState(prevState => {
         return {
           products: [...prevState.products, ...response.data],
-          currentPage: prevState.currentPage++
+          currentPage: prevState.currentPage++,
+          loading: false
         }
       })
     } catch (err) {
@@ -75,7 +80,7 @@ export default class ProductsPage extends React.Component {
   }
 
   render () {
-    const { products } = this.state
+    const { products, loading } = this.state
     console.log(this.state)
     return (
       <Default meta={this.props.meta}>
@@ -121,7 +126,9 @@ export default class ProductsPage extends React.Component {
               <div className="column has-text-centered">
                 <button
                   onClick={() => this.loadMoreProducts()}
-                  className="button is-inverted is-outlined"
+                  className={`${
+                    loading ? 'is-loading' : ''
+                  } button is-inverted is-outlined`}
                 >
                   Load More
                 </button>
