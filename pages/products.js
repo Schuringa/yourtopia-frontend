@@ -116,12 +116,12 @@ export default class ProductsPage extends React.Component {
               </div>
             </div>
 
-            <div className="columns is-centered is-variable is-1-mobile is-multiline is-mobile">
+            <div className="columns is-variable is-1-mobile is-multiline">
               {products.map((value, index) => {
                 return <ProductCard key={index} productData={value} />
               })}
             </div>
-            <div className="columns">
+            <div className="columns is-centered">
               <div className="column has-text-centered">
                 <button
                   onClick={() => this.loadMoreProducts()}

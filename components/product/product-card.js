@@ -5,8 +5,8 @@ export default class ProductCard extends Component {
   render () {
     const { productData } = this.props
     return (
-      <div className="product column is-flex is-paddingless is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-widescreen is-one-fifth-fullhd">
-        <div className="card">
+      <div className="product column is-flex is-paddingless is-multiline">
+        <div className="card product-card">
           <div className="image-block has-text-centered is-vcentered">
             <img src={productData.image} />
           </div>
@@ -55,7 +55,10 @@ export default class ProductCard extends Component {
           {`
             .product {
               padding: 0.25em 0.25em !important;
-              width: 260px;
+              min-width: 260px;
+            }
+            .product-card {
+              width: 100%;
             }
             .image-block {
               height: 300px;

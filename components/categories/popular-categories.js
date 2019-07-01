@@ -15,7 +15,7 @@ export default class PopularCategories extends Component {
                   <CategoryLink isParent value={key} />
                   {Object.keys(categories.Home[key]).map(function (key, index) {
                     return (
-                      <div>
+                      <div key={index}>
                         <CategoryLink value={key} />
                       </div>
                     )
