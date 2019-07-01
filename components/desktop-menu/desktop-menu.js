@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import variables from '../../../variables.json'
-import CategoriesDesktop from '../../categories/categories-desktop'
+import variables from '../../variables.json'
+import CategoriesDesktop from '../categories/categories-desktop'
 
 export default class DesktopMenu extends Component {
   constructor (props) {

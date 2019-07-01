@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import CategoriesMobile from '../../categories/categories-mobile'
+import CategoriesMobile from '../categories/categories-mobile'
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks
 } from 'body-scroll-lock'
-import variables from '../../../variables.json'
+import variables from '../../variables.json'
 
 export default class MobileMenu extends Component {
   constructor (props) {
