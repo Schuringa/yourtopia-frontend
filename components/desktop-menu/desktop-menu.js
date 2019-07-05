@@ -48,7 +48,7 @@ export default class DesktopMenu extends Component {
               </ul>
             </div>
             <div
-              style={{ maxHeight: `${displayCategories ? '500px' : '0'}` }}
+              style={{ maxHeight: `${displayCategories ? '500px' : '500px'}` }}
               onMouseEnter={this.showCategories}
               className="categories"
             >
