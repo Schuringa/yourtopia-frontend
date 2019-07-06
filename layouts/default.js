@@ -6,12 +6,22 @@ export default class Default extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      blockTransition: true
+      blockTransition: true,
+      timer: null
     }
   }
-  componentWillMount () {
-    this.setState({ blockTransition: false })
+
+  componentDidMount () {
+    this.state.timer = setTimeout(
+      () => this.setState({ blockTransition: false }),
+      500
+    )
   }
+
+  componentWillUnmount () {
+    clearTimeout(this.state.timer)
+  }
+
   render () {
     return (
       <div className={`${this.state.blockTransition ? 'preload' : ''}`}>
