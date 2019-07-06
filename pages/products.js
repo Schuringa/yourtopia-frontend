@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { withRouter } from 'next/router'
 import ProductCard from '../components/product/product-card'
 import Breadcrumb from '../components/breadcrumb/breadcrumb'
 import Filter from '../components/filters/filters'
@@ -7,7 +8,7 @@ import FilterMobile from '../components/filters/filters-mobile'
 import Default from '../layouts/default'
 import '../styles.scss'
 
-export default class ProductsPage extends React.Component {
+class ProductsPage extends React.Component {
   static async getInitialProps ({ query }) {
     const meta = {
       title: `PriceHelp ${query.category}`,
@@ -81,6 +82,7 @@ export default class ProductsPage extends React.Component {
 
   render () {
     const { products, loading } = this.state
+    const { router } = this.props
     return (
       <Default meta={this.props.meta}>
         <div className="columns">
@@ -93,12 +95,12 @@ export default class ProductsPage extends React.Component {
               className="is-size-5 is-hidden-tablet"
               style={{ marginBottom: '0.75em' }}
             >
-              {this.props.url.query.category}
+              {router.query.category}
             </h1>
             <div className="level is-mobile">
               <div className="level-left">
                 <div className="level-item is-hidden-mobile">
-                  <h1 className="is-size-5">{this.props.url.query.category}</h1>
+                  <h1 className="is-size-5">{router.query.category}</h1>
                 </div>
                 <div className="level-item">
                   <FilterMobile />
@@ -122,12 +124,12 @@ export default class ProductsPage extends React.Component {
               })}
             </div>
             <div className="columns is-centered">
-              <div className="column has-text-centered">
+              <div className="column is-3 has-text-centered">
                 <button
                   onClick={() => this.loadMoreProducts()}
                   className={`${
                     loading ? 'is-loading' : ''
-                  } button is-inverted is-outlined`}
+                  } button is-inverted is-outlined is-fullwidth`}
                 >
                   Load More
                 </button>
@@ -138,7 +140,6 @@ export default class ProductsPage extends React.Component {
         <style jsx>
           {`
             button {
-              padding: 1.5em 2em 1.5em 2em;
               border-radius: 0px;
             }
           `}
@@ -147,3 +148,5 @@ export default class ProductsPage extends React.Component {
     )
   }
 }
+
+export default withRouter(ProductsPage)

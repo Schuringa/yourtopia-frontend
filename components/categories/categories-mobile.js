@@ -11,7 +11,7 @@ export default class CategoriesMobile extends Component {
             {Object.keys(categories.Home).map(function (key, index) {
               return (
                 <li key={index}>
-                  <p class="menu-label">
+                  <p className="menu-label">
                     <CategoryLink value={key} />
                   </p>
                   <ul>

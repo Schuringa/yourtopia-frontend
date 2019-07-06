@@ -9,7 +9,7 @@ export default class Default extends Component {
       blockTransition: true
     }
   }
-  componentDidMount () {
+  componentWillMount () {
     this.setState({ blockTransition: false })
   }
   render () {
