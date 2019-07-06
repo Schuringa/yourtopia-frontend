@@ -44,13 +44,14 @@ export default class CategoriesDesktop extends Component {
   render () {
     return (
       <div className="category-container">
-        {this.state.categoriesChecked.map(function (value) {
+        {this.state.categoriesChecked.map(value => {
           return (
             <div
+              key={value.key}
               onMouseLeave={() => this.hideCategories(value.key)}
               className="columns is-multiline is-marginless is-paddingless"
             >
-              <div key={value.key} className="column is-paddingless">
+              <div className="column is-paddingless">
                 <div onMouseEnter={() => this.showCategories(value.key)}>
                   <CategoryLink isParent value={value.name} />
                 </div>
