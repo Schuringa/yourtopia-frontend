@@ -1,76 +1,81 @@
 import React, { Component } from 'react'
 import CategoryLink from './category-link'
 import categories from './categories_edited.json'
+import ChevronRightIcon from 'mdi-react/ChevronRightIcon'
 
 export default class CategoriesDesktop extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      categoriesChecked: []
+      currentSubcategory: [],
+      currentCategory: ''
     }
     this.showCategories = this.showCategories.bind(this)
     this.hideCategories = this.hideCategories.bind(this)
   }
 
   componentWillMount () {
-    Object.keys(categories.Home).map((value, key) => {
-      this.setState(prevState => ({
-        categoriesChecked: [
-          ...prevState.categoriesChecked,
-          { key, name: value, isChecked: false }
-        ]
-      }))
+    this.showCategories(Object.keys(categories.Home)[0])
+  }
+
+  showCategories (value) {
+    this.setState({
+      currentSubcategory: Object.keys(categories.Home[value]),
+      currentCategory: value
     })
   }
 
-  showCategories (key) {
-    let newValue = { ...this.state.categoriesChecked[key], isChecked: true }
-    let array = [...this.state.categoriesChecked]
-    array.splice(key, 1, newValue)
+  hideCategories () {
     this.setState({
-      categoriesChecked: array
-    })
-  }
-
-  hideCategories (key) {
-    let newValue = { ...this.state.categoriesChecked[key], isChecked: false }
-    let array = [...this.state.categoriesChecked]
-    array.splice(key, 1, newValue)
-    this.setState({
-      categoriesChecked: array
+      currentSubcategory: [],
+      currentCategory: ''
     })
   }
 
   render () {
     return (
       <div className="category-container">
-        {this.state.categoriesChecked.map(value => {
-          return (
-            <div
-              key={value.key}
-              onMouseLeave={() => this.hideCategories(value.key)}
-              className="columns is-multiline is-marginless is-paddingless"
-            >
-              <div className="column is-paddingless">
-                <div onMouseEnter={() => this.showCategories(value.key)}>
-                  <CategoryLink isParent value={value.name} />
+        <div className="columns">
+          <div className="column is-3">
+            {Object.keys(categories.Home).map((value, index) => {
+              return (
+                <div
+                  key={index}
+                  className="columns is-multiline is-marginless is-paddingless"
+                >
+                  <div className="column is-paddingless">
+                    <span onMouseEnter={() => this.showCategories(value)}>
+                      <div className="level">
+                        <CategoryLink isParent value={value} />
+                        {this.state.currentCategory === value ? (
+                          <span className="icon has-text-success">
+                            <ChevronRightIcon size="2em" />
+                          </span>
+                        ) : null}
+                      </div>
+                    </span>
+                  </div>
                 </div>
-                <div className={`${value.isChecked ? '' : 'is-hidden'}`}>
-                  {Object.keys(categories.Home[value.name]).map(
-                    (key, index) => {
-                      return (
-                        <div key={index}>
-                          <CategoryLink value={key} />
-                        </div>
-                      )
-                    }
-                  )}
-                </div>
+              )
+            }, this)}
+          </div>
+          <div className="column">
+            <div className="sub-category-container">
+              <div className="columns is-multiline">
+                {this.state.currentSubcategory.map((value, index) => {
+                  return (
+                    <div
+                      className="column is-paddingless is-4 has-text-grey-light"
+                      key={index}
+                    >
+                      <CategoryLink value={value} />
+                    </div>
+                  )
+                })}
               </div>
             </div>
-          )
-        }, this)}
-
+          </div>
+        </div>
         <style jsx>
           {`
             .category-container {
@@ -80,6 +85,9 @@ export default class CategoriesDesktop extends Component {
             .category-item {
               padding: 0.5em;
               text-decoration: underline;
+            }
+            .sub-category-container {
+              margin-top: 0.475em;
             }
           `}
         </style>
