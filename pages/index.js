@@ -7,7 +7,7 @@ import TagOutlineIcon from 'mdi-react/TagOutlineIcon'
 import ShieldOutlineIcon from 'mdi-react/ShieldOutlineIcon'
 import MedalIcon from 'mdi-react/MedalIcon'
 import '../styles.scss'
-const meta = { title: 'Price Help Staging', description: 'Staging site' }
+const meta = { title: 'Price Help', description: 'Price Help' }
 
 export default class IndexPage extends React.Component {
   render () {
