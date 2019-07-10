@@ -36,7 +36,7 @@ export default class CategoriesDesktop extends Component {
     return (
       <div className="category-container">
         <div className="columns">
-          <div className="column is-3">
+          <div className="column is-3-desktop is-4-touch">
             {Object.keys(categories.Home).map((value, index) => {
               return (
                 <div
@@ -65,7 +65,7 @@ export default class CategoriesDesktop extends Component {
                 {this.state.currentSubcategory.map((value, index) => {
                   return (
                     <div
-                      className="column is-paddingless is-4 has-text-grey-light"
+                      className="column is-paddingless is-4 has-text-grey-light category-item"
                       key={index}
                     >
                       <CategoryLink value={value} />
@@ -83,7 +83,6 @@ export default class CategoriesDesktop extends Component {
               width: 100%;
             }
             .category-item {
-              padding: 0.5em;
               text-decoration: underline;
             }
             .sub-category-container {
