@@ -5,7 +5,7 @@ export default class ProductCard extends Component {
   render () {
     const { productData } = this.props
     return (
-      <div className="product column is-flex is-paddingless is-multiline">
+      <div className="product column is-12-mobile is-6-tablet is-3-desktop is-flex is-paddingless is-multiline">
         <div className="card product-card">
           <div className="image-block has-text-centered is-vcentered">
             <img src={productData.image} />
