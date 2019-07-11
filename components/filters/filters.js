@@ -7,58 +7,92 @@ export default class Filter extends Component {
         <p className="menu-label is-size-7">Collection</p>
         <ul className="menu-list is-size-7">
           <li>
-            <a>Spring</a>
+            <a>
+              <input type="checkbox" /> Spring
+            </a>
           </li>
           <li>
-            <a>Summer</a>
+            <a>
+              <input type="checkbox" /> Summer
+            </a>
           </li>
           <li>
-            <a>Winter</a>
+            <a>
+              <input type="checkbox" /> Winter
+            </a>
           </li>
         </ul>
         <p className="menu-label is-size-7">Color</p>
         <ul className="menu-list is-size-7">
           <li>
-            <ul>
-              <li>
-                <a>Blue</a>
-              </li>
-              <li>
-                <a>Red</a>
-              </li>
-              <li>
-                <a>Green</a>
-              </li>
-            </ul>
+            <li>
+              <a>
+                <input type="checkbox" />
+                Blue
+              </a>
+            </li>
+            <li>
+              <a>
+                <input type="checkbox" />
+                Red
+              </a>
+            </li>
+            <li>
+              <a>
+                <input type="checkbox" />
+                Green
+              </a>
+            </li>
           </li>
         </ul>
         <p className="menu-label is-size-7">Occasion</p>
         <ul className="menu-list is-size-7">
           <li>
-            <a>Business</a>
+            <a>
+              <input type="checkbox" />
+              Business
+            </a>
           </li>
           <li>
-            <a>Evening</a>
+            <a>
+              <input type="checkbox" />
+              Evening
+            </a>
           </li>
           <li>
-            <a>Leisure</a>
+            <a>
+              <input type="checkbox" />
+              Leisure
+            </a>
           </li>
         </ul>
         <p className="menu-label is-size-7">Material</p>
         <ul className="menu-list is-size-7">
           <li>
-            <a>Cotton</a>
+            <a>
+              <input type="checkbox" />
+              Cotton
+            </a>
           </li>
           <li>
-            <a>Denim</a>
+            <a>
+              <input type="checkbox" />
+              Denim
+            </a>
           </li>
           <li>
-            <a>Fleece</a>
+            <a>
+              <input type="checkbox" />
+              Fleece
+            </a>
           </li>
         </ul>
         <style jsx>{`
           .filters {
             width: 200px;
+          }
+          input {
+            margin-right: 1em;
           }
         `}</style>
       </aside>
