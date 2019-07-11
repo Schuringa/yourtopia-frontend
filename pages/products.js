@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { withRouter } from 'next/router'
 import ProductCard from '../components/product/product-card'
-import Breadcrumb from '../components/breadcrumb/breadcrumb'
+// import Breadcrumb from '../components/breadcrumb/breadcrumb'
 import Filter from '../components/filters/filters'
 import FilterMobile from '../components/filters/filters-mobile'
 import Default from '../layouts/default'
@@ -90,7 +90,7 @@ class ProductsPage extends React.Component {
             <Filter />
           </div>
           <div className="column">
-            <Breadcrumb />
+            {/* <Breadcrumb /> */}
             <h1
               className="is-size-5 is-hidden-tablet"
               style={{ marginBottom: '0.75em' }}
