@@ -128,8 +128,10 @@ class ProductsPage extends React.Component {
                 <button
                   onClick={() => this.loadMoreProducts()}
                   className={`${
-                    loading ? 'is-loading' : ''
-                  } button is-inverted is-outlined is-fullwidth`}
+                    loading
+                      ? ' button  is-outlined is-fullwidth is-success is-loading '
+                      : 'button is-inverted is-outlined is-fullwidth'
+                  } `}
                 >
                   Load More
                 </button>
