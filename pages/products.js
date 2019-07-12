@@ -129,7 +129,7 @@ class ProductsPage extends React.Component {
                   onClick={() => this.loadMoreProducts()}
                   className={`${
                     loading
-                      ? ' button  is-outlined is-fullwidth is-success is-loading '
+                      ? ' button has-background-white is-success is-loading is-outlined is-fullwidth'
                       : 'button is-inverted is-outlined is-fullwidth'
                   } `}
                 >
