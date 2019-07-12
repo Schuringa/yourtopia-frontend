@@ -24,6 +24,17 @@ code {
   }
 }
 
+// Typography
+.has-background-gradient {
+  background: -webkit-linear-gradient($primary, $secondary);
+}
+.has-text-gradient {
+  background: -webkit-linear-gradient($primary, $secondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 // Inputs
 .input {
   border: none;

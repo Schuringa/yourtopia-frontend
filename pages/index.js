@@ -1,5 +1,6 @@
 // pages/index.js
 import React from 'react'
+import Link from 'next/link'
 import Default from '../layouts/default'
 import PopularCategories from '../components/categories/popular-categories'
 import CartOutlineIcon from 'mdi-react/CartOutlineIcon'
@@ -34,7 +35,12 @@ export default class IndexPage extends React.Component {
               src="/static/forest_banner_compressed.jpg"
             />
             <div className="image-text is-size-3 is-family-secondary">
-              Our journey to save the planet
+              <div>Our journey to save the planet</div>
+              <Link href="/about">
+                <a className="button is-medium is-family-secondary">
+                  Discover more
+                </a>
+              </Link>
             </div>
           </div>
           <div className="columns icons-banner">
