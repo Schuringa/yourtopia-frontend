@@ -25,24 +25,22 @@ export default class Filter extends Component {
         <p className="menu-label is-size-7">Color</p>
         <ul className="menu-list is-size-7">
           <li>
-            <li>
-              <a>
-                <input type="checkbox" />
-                Blue
-              </a>
-            </li>
-            <li>
-              <a>
-                <input type="checkbox" />
-                Red
-              </a>
-            </li>
-            <li>
-              <a>
-                <input type="checkbox" />
-                Green
-              </a>
-            </li>
+            <a>
+              <input type="checkbox" />
+              Blue
+            </a>
+          </li>
+          <li>
+            <a>
+              <input type="checkbox" />
+              Red
+            </a>
+          </li>
+          <li>
+            <a>
+              <input type="checkbox" />
+              Green
+            </a>
           </li>
         </ul>
         <p className="menu-label is-size-7">Occasion</p>

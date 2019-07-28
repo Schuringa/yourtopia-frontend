@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
+    "start": "next start",
     "build": "next build",
     "deploy": "next build && now",
     "lint": "yarn eslint"
@@ -15,7 +16,7 @@
     "body-scroll-lock": "^2.6.1",
     "bulma": "^0.7.5",
     "mdi-react": "^5.4.0",
-    "next": "^8.1.0",
+    "next": "^9.0.2",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

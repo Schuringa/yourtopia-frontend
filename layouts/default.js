@@ -37,8 +37,8 @@ export default class Default extends Component {
           focusable="false"
         >
           <linearGradient id="my-cool-gradient" x2="1" y2="1">
-            <stop offset="0%" stop-color="#6fb642" />
-            <stop offset="100%" stop-color="#20a568" />
+            <stop offset="0%" stopColor="#6fb642" />
+            <stop offset="100%" stopColor="#20a568" />
           </linearGradient>
         </svg>
       </div>
