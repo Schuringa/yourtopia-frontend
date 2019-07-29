@@ -82,7 +82,6 @@ class ProductsPage extends React.Component {
   }
 
   render () {
-    console.log(this.state)
     const { products, loading, totalProducts, limit } = this.state
     const { router } = this.props
     return (

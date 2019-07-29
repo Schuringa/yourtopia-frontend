@@ -33,11 +33,11 @@ export default class Header extends Component {
           </Link>
           <div
             style={{ flexGrow: 1 }}
-            className="navbar-item header-item has-cursor-pointer is-paddingless"
+            className="navbar-item header-item is-paddingless"
           >
             <Search />
           </div>
-          <div className="navbar-item header-item has-cursor-pointer">
+          <div className="navbar-item header-item has-cursor-pointer is-hidden-desktop">
             <MobileMenu />
           </div>
         </div>

@@ -20,35 +20,36 @@ class Search extends Component {
 
   // Event fired when the input value is changed
   onChange = async e => {
-    const { suggestions } = this.props
+    this.setState({ userInput: e.target.value })
     const userInput = e.currentTarget.value
     const response = await axios({
       method: 'post',
       url: 'http://elastic.pricehelp.com:9200/pricehelp.products/_search',
       data: {
         query: {
-          match: {
-            category: userInput
+          multi_match: {
+            query: userInput,
+            fields: ['brand', 'category', 'name']
           }
         },
         size: 5
       }
     })
-    console.log(response)
-    // Filter our suggestions that don't contain the user's input
-    const filteredSuggestions = suggestions.filter(
-      suggestion =>
-        suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
-    )
-
-    // Update the user input and filtered suggestions, reset the active
-    // suggestion and make sure the suggestions are shown
-    this.setState({
-      activeSuggestion: 0,
-      filteredSuggestions,
-      showSuggestions: true,
-      userInput: e.currentTarget.value
-    })
+    try {
+      this.setState({
+        activeSuggestion: 0,
+        showSuggestions: response.data.hits.hits.length > 0,
+        userInput: e.currentTarget.value,
+        suggestions: response.data.hits.hits
+      })
+    } catch (error) {
+      this.setState({
+        activeSuggestion: 0,
+        showSuggestions: true,
+        userInput: e.currentTarget.value
+      })
+      return error
+    }
   }
 
   // Event fired when the user clicks on a suggestion
@@ -65,7 +66,6 @@ class Search extends Component {
   // Event fired when the user presses a key down
   onKeyDown = e => {
     const { activeSuggestion, filteredSuggestions } = this.state
-
     // User pressed the enter key, update the input and close the
     // suggestions
     if (e.keyCode === 13) {
@@ -94,45 +94,8 @@ class Search extends Component {
       onChange,
       onClick,
       onKeyDown,
-      state: {
-        activeSuggestion,
-        filteredSuggestions,
-        showSuggestions,
-        userInput
-      }
+      state: { suggestions, showSuggestions, userInput }
     } = this
-
-    let suggestionsListComponent
-
-    if (showSuggestions && userInput) {
-      if (filteredSuggestions.length) {
-        suggestionsListComponent = (
-          <ul class="suggestions">
-            {filteredSuggestions.map((suggestion, index) => {
-              let className
-
-              // Flag the active suggestion with a class
-              if (index === activeSuggestion) {
-                className = 'suggestion-active'
-              }
-
-              return (
-                <li className={className} key={suggestion} onClick={onClick}>
-                  {suggestion}
-                </li>
-              )
-            })}
-          </ul>
-        )
-      } else {
-        suggestionsListComponent = (
-          <div class="no-suggestions">
-            <em>No suggestions, you're on your own!</em>
-          </div>
-        )
-      }
-    }
-
     return (
       <Fragment>
         <div className="column is-paddingless">
@@ -145,12 +108,41 @@ class Search extends Component {
               onKeyDown={onKeyDown}
               value={userInput}
             />
-            <span className="icon is-right has-text-grey">
+            <div className="icon is-right has-text-grey has-cursor-pointer">
               <MagnifyIcon size="1.5em" />
-            </span>
+            </div>
           </div>
+          {showSuggestions ? (
+            <div className="column suggestions">
+              {suggestions.map((suggestion, index) => {
+                return (
+                  <div
+                    className="has-cursor-pointer"
+                    key={suggestion}
+                    onClick={onClick}
+                  >
+                    {suggestion._source.category}
+                  </div>
+                )
+              })}
+            </div>
+          ) : null}
         </div>
-        {suggestionsListComponent}
+
+        <style jsx>
+          {`
+            .suggestions {
+              display: block;
+              width: 100%;
+              position: absolute;
+              background: white;
+              box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+            }
+            .icon {
+              pointer-events: auto !important;
+            }
+          `}
+        </style>
       </Fragment>
     )
   }
