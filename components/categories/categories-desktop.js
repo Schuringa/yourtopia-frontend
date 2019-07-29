@@ -41,7 +41,7 @@ export default class CategoriesDesktop extends Component {
               return (
                 <div
                   key={index}
-                  className="columns is-multiline is-marginless is-paddingless"
+                  className="columns is-multiline is-marginless parent-category-item "
                 >
                   <div className="column is-paddingless">
                     <span onMouseEnter={() => this.showCategories(value)}>
@@ -81,6 +81,9 @@ export default class CategoriesDesktop extends Component {
             .category-container {
               padding: 3em;
               width: 100%;
+            }
+            .parent-category-item {
+              padding: 0.25em 0 0.25em 0;
             }
             .category-item {
               text-decoration: underline;

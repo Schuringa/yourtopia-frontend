@@ -30,6 +30,7 @@ class ProductsPage extends React.Component {
       })
       return {
         products: response.data.hits.hits,
+        totalProducts: response.data.hits.total.value,
         category: query.category,
         meta
       }
@@ -43,6 +44,7 @@ class ProductsPage extends React.Component {
 
   state = {
     products: this.props.products,
+    totalProducts: this.props.totalProducts,
     currentPage: 0,
     limit: 20
   }
@@ -67,6 +69,7 @@ class ProductsPage extends React.Component {
       this.setState(prevState => {
         return {
           products: [...prevState.products, ...response.data.hits.hits],
+          totalProducts: response.data.hits.total.value,
           currentPage: prevState.currentPage++,
           loading: false
         }
@@ -79,7 +82,8 @@ class ProductsPage extends React.Component {
   }
 
   render () {
-    const { products, loading } = this.state
+    console.log(this.state)
+    const { products, loading, totalProducts, limit } = this.state
     const { router } = this.props
     return (
       <Default meta={this.props.meta}>
@@ -123,16 +127,18 @@ class ProductsPage extends React.Component {
             </div>
             <div className="columns is-centered">
               <div className="column is-3 has-text-centered">
-                <button
-                  onClick={() => this.loadMoreProducts()}
-                  className={`${
-                    loading
-                      ? ' button is-outlined is-fullwidth is-success is-loading '
-                      : 'button is-inverted is-outlined is-fullwidth'
-                  } `}
-                >
-                  Load More
-                </button>
+                {totalProducts > limit ? (
+                  <button
+                    onClick={() => this.loadMoreProducts()}
+                    className={`${
+                      loading
+                        ? ' button is-outlined is-fullwidth is-success is-loading '
+                        : 'button is-inverted is-outlined is-fullwidth'
+                    } `}
+                  >
+                    Load More
+                  </button>
+                ) : null}
               </div>
             </div>
           </div>
