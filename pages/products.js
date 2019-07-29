@@ -25,7 +25,7 @@ class ProductsPage extends React.Component {
             }
           },
           from: 0,
-          size: 21
+          size: 20
         }
       })
       return {
@@ -44,7 +44,7 @@ class ProductsPage extends React.Component {
   state = {
     products: this.props.products,
     currentPage: 0,
-    limit: 21
+    limit: 20
   }
 
   async loadMoreProducts () {
@@ -60,8 +60,8 @@ class ProductsPage extends React.Component {
               category: this.props.category
             }
           },
-          from: 0,
-          size: 21
+          from: this.state.limit,
+          size: this.state.currentPage * this.state.limit
         }
       })
       this.setState(prevState => {
