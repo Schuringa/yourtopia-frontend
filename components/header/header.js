@@ -52,6 +52,11 @@ export default class Header extends Component {
             padding-top: 0;
             padding-bottom: 0;
           }
+          @media (width > 796px) {
+            .header-item {
+              margin-right: 1em;
+            }
+          }
         `}</style>
       </nav>
     )
