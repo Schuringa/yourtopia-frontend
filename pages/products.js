@@ -10,6 +10,7 @@ import '../styles.scss'
 
 class ProductsPage extends React.Component {
   static async getInitialProps ({ query }) {
+    console.log(query)
     const meta = {
       title: `PriceHelp ${query.category}`,
       description: `PriceHelp ${query.category}`
@@ -45,6 +46,7 @@ class ProductsPage extends React.Component {
   state = {
     products: this.props.products,
     totalProducts: this.props.totalProducts,
+    category: this.props.category,
     currentPage: 0,
     limit: 20
   }
@@ -59,7 +61,7 @@ class ProductsPage extends React.Component {
         data: {
           query: {
             match: {
-              category: this.props.category
+              category: this.state.category
             }
           },
           from: this.state.limit,
@@ -82,8 +84,7 @@ class ProductsPage extends React.Component {
   }
 
   render () {
-    const { products, loading, totalProducts, limit } = this.state
-    const { router } = this.props
+    const { products, loading, totalProducts, limit, category } = this.state
     return (
       <Default meta={this.props.meta}>
         <div className="columns">
@@ -96,12 +97,12 @@ class ProductsPage extends React.Component {
               className="is-size-5 is-hidden-tablet"
               style={{ marginBottom: '0.75em' }}
             >
-              {router.query.category}
+              {category}
             </h1>
             <div className="level is-mobile">
               <div className="level-left">
                 <div className="level-item is-hidden-mobile">
-                  <h1 className="is-size-5">{router.query.category}</h1>
+                  <h1 className="is-size-5">{category}</h1>
                 </div>
                 <div className="level-item">
                   <FilterMobile />
