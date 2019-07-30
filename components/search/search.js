@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import Link from 'next/link'
 import axios from 'axios'
 import MagnifyIcon from 'mdi-react/MagnifyIcon'
 
@@ -20,8 +21,9 @@ class Search extends Component {
 
   // Event fired when the input value is changed
   onChange = async e => {
+    e.persist()
     this.setState({ userInput: e.target.value })
-    const userInput = e.currentTarget.value
+    const userInput = e.target.value
     const response = await axios({
       method: 'post',
       url: 'http://elastic.pricehelp.com:9200/pricehelp.products/_search',
@@ -39,14 +41,14 @@ class Search extends Component {
       this.setState({
         activeSuggestion: 0,
         showSuggestions: response.data.hits.hits.length > 0,
-        userInput: e.currentTarget.value,
+        userInput: e.target.value,
         suggestions: response.data.hits.hits
       })
     } catch (error) {
       this.setState({
         activeSuggestion: 0,
         showSuggestions: true,
-        userInput: e.currentTarget.value
+        userInput: e.target.value
       })
       return error
     }
@@ -59,7 +61,7 @@ class Search extends Component {
       activeSuggestion: 0,
       filteredSuggestions: [],
       showSuggestions: false,
-      userInput: e.currentTarget.innerText
+      userInput: e.target.innerText
     })
   }
 
@@ -113,16 +115,22 @@ class Search extends Component {
             </div>
           </div>
           {showSuggestions ? (
-            <div className="column suggestions">
+            <div className="suggestions">
               {suggestions.map((suggestion, index) => {
                 return (
-                  <div
-                    className="has-cursor-pointer"
-                    key={suggestion}
-                    onClick={onClick}
+                  <Link
+                    key={index}
+                    href={`/products?search=${encodeURIComponent(
+                      suggestion._source.name
+                    )}`}
                   >
-                    {suggestion._source.category}
-                  </div>
+                    <div
+                      className="has-cursor-pointer suggestion-item"
+                      onClick={onClick}
+                    >
+                      {suggestion._source.category}
+                    </div>
+                  </Link>
                 )
               })}
             </div>
@@ -137,6 +145,12 @@ class Search extends Component {
               position: absolute;
               background: white;
               box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+            }
+            .suggestion-item {
+              padding: 0.5em 0.75em 0.5em 0.75em;
+            }
+            .suggestion-item:hover {
+              background: whitesmoke;
             }
             .icon {
               pointer-events: auto !important;
