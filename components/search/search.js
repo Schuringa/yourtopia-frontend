@@ -4,19 +4,21 @@ import axios from 'axios'
 import MagnifyIcon from 'mdi-react/MagnifyIcon'
 
 class Search extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      // The active selection's index
-      activeSuggestion: 0,
-      // The suggestions that match the user's input
-      filteredSuggestions: [],
-      // Whether or not the suggestion list is shown
-      showSuggestions: false,
-      // What the user has entered
-      userInput: ''
+  static async getInitialProps ({ query }) {
+    return {
+      query
     }
+  }
+
+  state = {
+    // The active selection's index
+    activeSuggestion: 0,
+    // The suggestions that match the user's input
+    filteredSuggestions: [],
+    // Whether or not the suggestion list is shown
+    showSuggestions: false,
+    // What the user has entered
+    userInput: ''
   }
 
   // Event fired when the input value is changed
@@ -31,7 +33,7 @@ class Search extends Component {
         query: {
           multi_match: {
             query: userInput,
-            fields: ['brand', 'category', 'name']
+            fields: ['category', 'name']
           }
         },
         size: 5
@@ -65,37 +67,10 @@ class Search extends Component {
     })
   }
 
-  // Event fired when the user presses a key down
-  onKeyDown = e => {
-    const { activeSuggestion, filteredSuggestions } = this.state
-    // User pressed the enter key, update the input and close the
-    // suggestions
-    if (e.keyCode === 13) {
-      this.setState({
-        activeSuggestion: 0,
-        showSuggestions: false,
-        userInput: filteredSuggestions[activeSuggestion]
-      })
-    } else if (e.keyCode === 38) {
-      if (activeSuggestion === 0) {
-        return
-      }
-
-      this.setState({ activeSuggestion: activeSuggestion - 1 })
-    } else if (e.keyCode === 40) {
-      if (activeSuggestion - 1 === filteredSuggestions.length) {
-        return
-      }
-
-      this.setState({ activeSuggestion: activeSuggestion + 1 })
-    }
-  }
-
   render () {
     const {
       onChange,
       onClick,
-      onKeyDown,
       state: { suggestions, showSuggestions, userInput }
     } = this
     return (
@@ -107,8 +82,8 @@ class Search extends Component {
               placeholder="Search"
               type="text"
               onChange={onChange}
-              onKeyDown={onKeyDown}
               value={userInput}
+              defaultValue={this.props.search || ''}
             />
             <div className="icon is-right has-text-grey has-cursor-pointer">
               <MagnifyIcon size="1.5em" />
@@ -120,15 +95,22 @@ class Search extends Component {
                 return (
                   <Link
                     key={index}
-                    href={`/products?search=${encodeURIComponent(
-                      suggestion._source.name
-                    )}`}
+                    href={{
+                      pathname: '/products',
+                      query: {
+                        search: suggestion._source.name,
+                        category: suggestion._source.category
+                      }
+                    }}
                   >
                     <div
-                      className="has-cursor-pointer suggestion-item"
                       onClick={onClick}
+                      className="has-cursor-pointer suggestion-item"
                     >
-                      {suggestion._source.category}
+                      <p>{suggestion._source.name}</p>
+                      <p className="is-size-7">
+                        In {suggestion._source.category}
+                      </p>
                     </div>
                   </Link>
                 )
