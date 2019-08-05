@@ -10,7 +10,6 @@ import '../styles.scss'
 
 class ProductsPage extends React.Component {
   static async getInitialProps ({ query }) {
-    console.log(query)
     const meta = {
       title: `PriceHelp ${query.category}`,
       description: `PriceHelp ${query.category}`
@@ -21,8 +20,9 @@ class ProductsPage extends React.Component {
         url: 'http://elastic.pricehelp.com:9200/pricehelp.products/_search',
         data: {
           query: {
-            match: {
-              category: query.category
+            query_string: {
+              fields: ['category', 'name'],
+              query: `${query.category} OR ${query.search}`
             }
           },
           from: 0,
