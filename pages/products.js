@@ -121,9 +121,13 @@ class ProductsPage extends React.Component {
             </div>
 
             <div className="columns is-variable is-1-mobile is-multiline">
-              {products.map((value, index) => {
-                return <ProductCard key={index} productData={value._source} />
-              })}
+              {products ? (
+                products.map((value, index) => {
+                  return <ProductCard key={index} productData={value._source} />
+                })
+              ) : (
+                <div>No products found</div>
+              )}
             </div>
             <div className="columns is-centered">
               <div className="column is-3 has-text-centered">
