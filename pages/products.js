@@ -17,7 +17,7 @@ class ProductsPage extends React.Component {
     try {
       const response = await axios({
         method: 'post',
-        url: 'http://elastic.pricehelp.com:9200/pricehelp.products/_search',
+        url: 'https://elastic.pricehelp.com/pricehelp.products/_search',
         data: {
           query: {
             query_string: {
@@ -57,7 +57,7 @@ class ProductsPage extends React.Component {
     try {
       const response = await axios({
         method: 'post',
-        url: 'http://elastic.pricehelp.com:9200/pricehelp.products/_search',
+        url: 'https://elastic.pricehelp.com/pricehelp.products/_search',
         data: {
           query: {
             match: {
